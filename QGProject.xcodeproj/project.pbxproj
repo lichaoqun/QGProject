@@ -3,29 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D080EF1822508887002ACDFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF1722508887002ACDFB /* AppDelegate.m */; };
-		D080EF1B22508887002ACDFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF1A22508887002ACDFB /* ViewController.m */; };
-		D080EF1E22508887002ACDFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D080EF1C22508887002ACDFB /* Main.storyboard */; };
+		D080EF1822508887002ACDFB /* QGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF1722508887002ACDFB /* QGAppDelegate.m */; };
 		D080EF202250888B002ACDFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D080EF1F2250888B002ACDFB /* Assets.xcassets */; };
-		D080EF232250888B002ACDFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D080EF212250888B002ACDFB /* LaunchScreen.storyboard */; };
 		D080EF262250888C002ACDFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF252250888C002ACDFB /* main.m */; };
+		D080EF32225089BD002ACDFB /* QGTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF31225089BD002ACDFB /* QGTabbarController.m */; };
+		D080EF3522508A01002ACDFB /* QGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF3422508A01002ACDFB /* QGNavigationController.m */; };
+		D080EF3822508D8D002ACDFB /* QGBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF3722508D8D002ACDFB /* QGBaseVC.m */; };
+		D080EF3B22508DA8002ACDFB /* QGHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF3A22508DA8002ACDFB /* QGHomeVC.m */; };
+		D080EF4B22508EBC002ACDFB /* QGPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF4822508EBC002ACDFB /* QGPublishVC.m */; };
+		D080EF5122508ED0002ACDFB /* QGMineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF4F22508ED0002ACDFB /* QGMineVC.m */; };
+		D080EF5422510830002ACDFB /* QGArticleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF5322510830002ACDFB /* QGArticleVC.m */; };
+		D080EF57225114BE002ACDFB /* QGTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF56225114BE002ACDFB /* QGTabbar.m */; };
+		D080EF5F22511891002ACDFB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF5E22511890002ACDFB /* UIView+Extension.m */; };
+		F83673F4DFD991B86AC1D13C /* libPods-QGProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467D65BEE33BF7C6DD24E68 /* libPods-QGProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BECCDDC442D141863F94A35 /* Pods-QGProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-QGProject/Pods-QGProject.release.xcconfig"; sourceTree = "<group>"; };
+		8467D65BEE33BF7C6DD24E68 /* libPods-QGProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QGProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A142FA552444A347E7DB7957 /* Pods-QGProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QGProject/Pods-QGProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D080EF1322508887002ACDFB /* QGProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QGProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D080EF1622508887002ACDFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D080EF1722508887002ACDFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D080EF1922508887002ACDFB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D080EF1A22508887002ACDFB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D080EF1D22508887002ACDFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D080EF1622508887002ACDFB /* QGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAppDelegate.h; sourceTree = "<group>"; };
+		D080EF1722508887002ACDFB /* QGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAppDelegate.m; sourceTree = "<group>"; };
 		D080EF1F2250888B002ACDFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D080EF222250888B002ACDFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D080EF242250888C002ACDFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D080EF252250888C002ACDFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D080EF30225089BD002ACDFB /* QGTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTabbarController.h; sourceTree = "<group>"; };
+		D080EF31225089BD002ACDFB /* QGTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTabbarController.m; sourceTree = "<group>"; };
+		D080EF3322508A01002ACDFB /* QGNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNavigationController.h; sourceTree = "<group>"; };
+		D080EF3422508A01002ACDFB /* QGNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNavigationController.m; sourceTree = "<group>"; };
+		D080EF3622508D8D002ACDFB /* QGBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGBaseVC.h; sourceTree = "<group>"; };
+		D080EF3722508D8D002ACDFB /* QGBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGBaseVC.m; sourceTree = "<group>"; };
+		D080EF3922508DA8002ACDFB /* QGHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeVC.h; sourceTree = "<group>"; };
+		D080EF3A22508DA8002ACDFB /* QGHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeVC.m; sourceTree = "<group>"; };
+		D080EF4822508EBC002ACDFB /* QGPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGPublishVC.m; sourceTree = "<group>"; };
+		D080EF4922508EBC002ACDFB /* QGPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QGPublishVC.h; sourceTree = "<group>"; };
+		D080EF4F22508ED0002ACDFB /* QGMineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGMineVC.m; sourceTree = "<group>"; };
+		D080EF5022508ED0002ACDFB /* QGMineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QGMineVC.h; sourceTree = "<group>"; };
+		D080EF5222510830002ACDFB /* QGArticleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGArticleVC.h; sourceTree = "<group>"; };
+		D080EF5322510830002ACDFB /* QGArticleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGArticleVC.m; sourceTree = "<group>"; };
+		D080EF55225114BE002ACDFB /* QGTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTabbar.h; sourceTree = "<group>"; };
+		D080EF56225114BE002ACDFB /* QGTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTabbar.m; sourceTree = "<group>"; };
+		D080EF5D22511890002ACDFB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D080EF5E22511890002ACDFB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83673F4DFD991B86AC1D13C /* libPods-QGProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AD3447924BE68A900956C02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8467D65BEE33BF7C6DD24E68 /* libPods-QGProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BA2B99C3B83787222CC0465 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A142FA552444A347E7DB7957 /* Pods-QGProject.debug.xcconfig */,
+				1BECCDDC442D141863F94A35 /* Pods-QGProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D080EF0A22508887002ACDFB = {
 			isa = PBXGroup;
 			children = (
 				D080EF1522508887002ACDFB /* QGProject */,
 				D080EF1422508887002ACDFB /* Products */,
+				6BA2B99C3B83787222CC0465 /* Pods */,
+				6AD3447924BE68A900956C02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +102,175 @@
 		D080EF1522508887002ACDFB /* QGProject */ = {
 			isa = PBXGroup;
 			children = (
-				D080EF1622508887002ACDFB /* AppDelegate.h */,
-				D080EF1722508887002ACDFB /* AppDelegate.m */,
-				D080EF1922508887002ACDFB /* ViewController.h */,
-				D080EF1A22508887002ACDFB /* ViewController.m */,
-				D080EF1C22508887002ACDFB /* Main.storyboard */,
-				D080EF1F2250888B002ACDFB /* Assets.xcassets */,
-				D080EF212250888B002ACDFB /* LaunchScreen.storyboard */,
+				D080EF2D225088D0002ACDFB /* 首页 */,
+				D080EF2E225088E3002ACDFB /* 发布 */,
+				D080EF2F225088FB002ACDFB /* 我的 */,
+				D080EF2C225088AA002ACDFB /* 主要 */,
 				D080EF242250888C002ACDFB /* Info.plist */,
-				D080EF252250888C002ACDFB /* main.m */,
+				D080EF1F2250888B002ACDFB /* Assets.xcassets */,
 			);
 			path = QGProject;
+			sourceTree = "<group>";
+		};
+		D080EF2C225088AA002ACDFB /* 主要 */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF5C2251180D002ACDFB /* Tool */,
+				D080EF5B22511805002ACDFB /* Other */,
+				D080EF5A225117E9002ACDFB /* Category */,
+				D080EF59225117E5002ACDFB /* View */,
+				D080EF58225117DC002ACDFB /* Controller */,
+			);
+			path = "主要";
+			sourceTree = "<group>";
+		};
+		D080EF2D225088D0002ACDFB /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF4222508E35002ACDFB /* Controller */,
+				D080EF4522508E67002ACDFB /* View */,
+				D080EF4322508E4F002ACDFB /* Model */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		D080EF2E225088E3002ACDFB /* 发布 */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF4722508EBC002ACDFB /* Controller */,
+				D080EF4A22508EBC002ACDFB /* Model */,
+				D080EF4622508EBC002ACDFB /* View */,
+			);
+			path = "发布";
+			sourceTree = "<group>";
+		};
+		D080EF2F225088FB002ACDFB /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF4E22508ED0002ACDFB /* Controller */,
+				D080EF4D22508ED0002ACDFB /* Model */,
+				D080EF4C22508ED0002ACDFB /* View */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		D080EF4222508E35002ACDFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF3922508DA8002ACDFB /* QGHomeVC.h */,
+				D080EF3A22508DA8002ACDFB /* QGHomeVC.m */,
+				D080EF5222510830002ACDFB /* QGArticleVC.h */,
+				D080EF5322510830002ACDFB /* QGArticleVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D080EF4322508E4F002ACDFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D080EF4522508E67002ACDFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D080EF4622508EBC002ACDFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D080EF4722508EBC002ACDFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF4922508EBC002ACDFB /* QGPublishVC.h */,
+				D080EF4822508EBC002ACDFB /* QGPublishVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D080EF4A22508EBC002ACDFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D080EF4C22508ED0002ACDFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D080EF4D22508ED0002ACDFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D080EF4E22508ED0002ACDFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF5022508ED0002ACDFB /* QGMineVC.h */,
+				D080EF4F22508ED0002ACDFB /* QGMineVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D080EF58225117DC002ACDFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF30225089BD002ACDFB /* QGTabbarController.h */,
+				D080EF31225089BD002ACDFB /* QGTabbarController.m */,
+				D080EF3322508A01002ACDFB /* QGNavigationController.h */,
+				D080EF3422508A01002ACDFB /* QGNavigationController.m */,
+				D080EF3622508D8D002ACDFB /* QGBaseVC.h */,
+				D080EF3722508D8D002ACDFB /* QGBaseVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D080EF59225117E5002ACDFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF55225114BE002ACDFB /* QGTabbar.h */,
+				D080EF56225114BE002ACDFB /* QGTabbar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D080EF5A225117E9002ACDFB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF5D22511890002ACDFB /* UIView+Extension.h */,
+				D080EF5E22511890002ACDFB /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D080EF5B22511805002ACDFB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D080EF1622508887002ACDFB /* QGAppDelegate.h */,
+				D080EF1722508887002ACDFB /* QGAppDelegate.m */,
+				D080EF252250888C002ACDFB /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D080EF5C2251180D002ACDFB /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +280,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D080EF292250888C002ACDFB /* Build configuration list for PBXNativeTarget "QGProject" */;
 			buildPhases = (
+				9AD8183DA03C6713EB0555B7 /* [CP] Check Pods Manifest.lock */,
 				D080EF0F22508887002ACDFB /* Sources */,
 				D080EF1022508887002ACDFB /* Frameworks */,
 				D080EF1122508887002ACDFB /* Resources */,
+				225FA76A650328006FF0CBE4 /* [CP] Embed Pods Frameworks */,
+				37054A75926BE2CD12392BDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,16 +302,18 @@
 		D080EF0B22508887002ACDFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = QG;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = xinxianzhizao;
 				TargetAttributes = {
 					D080EF1222508887002ACDFB = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = D080EF0E22508887002ACDFB /* Build configuration list for PBXProject "QGProject" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -128,45 +335,83 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D080EF232250888B002ACDFB /* LaunchScreen.storyboard in Resources */,
 				D080EF202250888B002ACDFB /* Assets.xcassets in Resources */,
-				D080EF1E22508887002ACDFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		225FA76A650328006FF0CBE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QGProject/Pods-QGProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37054A75926BE2CD12392BDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QGProject/Pods-QGProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AD8183DA03C6713EB0555B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QGProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D080EF0F22508887002ACDFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D080EF1B22508887002ACDFB /* ViewController.m in Sources */,
 				D080EF262250888C002ACDFB /* main.m in Sources */,
-				D080EF1822508887002ACDFB /* AppDelegate.m in Sources */,
+				D080EF3B22508DA8002ACDFB /* QGHomeVC.m in Sources */,
+				D080EF5F22511891002ACDFB /* UIView+Extension.m in Sources */,
+				D080EF1822508887002ACDFB /* QGAppDelegate.m in Sources */,
+				D080EF3822508D8D002ACDFB /* QGBaseVC.m in Sources */,
+				D080EF3522508A01002ACDFB /* QGNavigationController.m in Sources */,
+				D080EF57225114BE002ACDFB /* QGTabbar.m in Sources */,
+				D080EF4B22508EBC002ACDFB /* QGPublishVC.m in Sources */,
+				D080EF5422510830002ACDFB /* QGArticleVC.m in Sources */,
+				D080EF32225089BD002ACDFB /* QGTabbarController.m in Sources */,
+				D080EF5122508ED0002ACDFB /* QGMineVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D080EF1C22508887002ACDFB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D080EF1D22508887002ACDFB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D080EF212250888B002ACDFB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D080EF222250888B002ACDFB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D080EF272250888C002ACDFB /* Debug */ = {
@@ -283,33 +528,33 @@
 		};
 		D080EF2A2250888C002ACDFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A142FA552444A347E7DB7957 /* Pods-QGProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UAMLXR22D;
 				INFOPLIST_FILE = QGProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.QG.xx.QGProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D080EF2B2250888C002ACDFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BECCDDC442D141863F94A35 /* Pods-QGProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UAMLXR22D;
 				INFOPLIST_FILE = QGProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.QG.xx.QGProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
