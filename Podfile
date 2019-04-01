@@ -9,4 +9,5 @@ target 'QGProject' do
  	pod 'PPNetworkHelper'
  	pod 'SDWebImage', '~> 4.0'
     pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'SDCycleScrollView','~> 1.75'
 end

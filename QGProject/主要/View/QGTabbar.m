@@ -7,7 +7,6 @@
 //
 
 #import "QGTabbar.h"
-#import "UIView+Extension.h"
 
 @interface QGTabbar ()
 @property (nonatomic, weak) UIButton *plusBtn;

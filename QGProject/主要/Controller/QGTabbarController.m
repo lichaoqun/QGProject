@@ -7,7 +7,6 @@
 //
 
 #import "QGTabbarController.h"
-#import <UINavigationController+FDFullscreenPopGesture.h>
 #import "QGHomeVC.h"
 #import "QGPublishVC.h"
 #import "QGMineVC.h"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D042711122526FE300FB1A26 /* QGHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFC622526A42002ACDFB /* QGHomeModel.m */; };
 		D080EF1822508887002ACDFB /* QGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF1722508887002ACDFB /* QGAppDelegate.m */; };
 		D080EF202250888B002ACDFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D080EF1F2250888B002ACDFB /* Assets.xcassets */; };
 		D080EF262250888C002ACDFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF252250888C002ACDFB /* main.m */; };
@@ -19,6 +20,14 @@
 		D080EF5422510830002ACDFB /* QGArticleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF5322510830002ACDFB /* QGArticleVC.m */; };
 		D080EF57225114BE002ACDFB /* QGTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF56225114BE002ACDFB /* QGTabbar.m */; };
 		D080EF5F22511891002ACDFB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EF5E22511890002ACDFB /* UIView+Extension.m */; };
+		D080EFA9225248C2002ACDFB /* QGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFA8225248C2002ACDFB /* QGTableViewCell.m */; };
+		D080EFAC22524949002ACDFB /* QGHomeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFAB22524949002ACDFB /* QGHomeSliderCell.m */; };
+		D080EFB022524B75002ACDFB /* QGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFAF22524B75002ACDFB /* QGModel.m */; };
+		D080EFB322524C6F002ACDFB /* QGHomeSlierModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFB222524C6F002ACDFB /* QGHomeSlierModel.m */; };
+		D080EFB622524C8A002ACDFB /* QGHomeCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFB522524C8A002ACDFB /* QGHomeCategoryCell.m */; };
+		D080EFBC22524E48002ACDFB /* QGHomeCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFBB22524E48002ACDFB /* QGHomeCategoryModel.m */; };
+		D080EFBF22524E72002ACDFB /* QGHomeTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFBE22524E72002ACDFB /* QGHomeTopicModel.m */; };
+		D080EFC222524EBA002ACDFB /* QGHomeTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFC122524EBA002ACDFB /* QGHomeTopicCell.m */; };
 		F83673F4DFD991B86AC1D13C /* libPods-QGProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467D65BEE33BF7C6DD24E68 /* libPods-QGProject.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +59,26 @@
 		D080EF56225114BE002ACDFB /* QGTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTabbar.m; sourceTree = "<group>"; };
 		D080EF5D22511890002ACDFB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		D080EF5E22511890002ACDFB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D080EFA7225248C2002ACDFB /* QGTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTableViewCell.h; sourceTree = "<group>"; };
+		D080EFA8225248C2002ACDFB /* QGTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTableViewCell.m; sourceTree = "<group>"; };
+		D080EFAA22524949002ACDFB /* QGHomeSliderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeSliderCell.h; sourceTree = "<group>"; };
+		D080EFAB22524949002ACDFB /* QGHomeSliderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeSliderCell.m; sourceTree = "<group>"; };
+		D080EFAE22524B75002ACDFB /* QGModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGModel.h; sourceTree = "<group>"; };
+		D080EFAF22524B75002ACDFB /* QGModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGModel.m; sourceTree = "<group>"; };
+		D080EFB122524C6F002ACDFB /* QGHomeSlierModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeSlierModel.h; sourceTree = "<group>"; };
+		D080EFB222524C6F002ACDFB /* QGHomeSlierModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeSlierModel.m; sourceTree = "<group>"; };
+		D080EFB422524C8A002ACDFB /* QGHomeCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeCategoryCell.h; sourceTree = "<group>"; };
+		D080EFB522524C8A002ACDFB /* QGHomeCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeCategoryCell.m; sourceTree = "<group>"; };
+		D080EFBA22524E48002ACDFB /* QGHomeCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeCategoryModel.h; sourceTree = "<group>"; };
+		D080EFBB22524E48002ACDFB /* QGHomeCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeCategoryModel.m; sourceTree = "<group>"; };
+		D080EFBD22524E72002ACDFB /* QGHomeTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeTopicModel.h; sourceTree = "<group>"; };
+		D080EFBE22524E72002ACDFB /* QGHomeTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeTopicModel.m; sourceTree = "<group>"; };
+		D080EFC022524EBA002ACDFB /* QGHomeTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeTopicCell.h; sourceTree = "<group>"; };
+		D080EFC122524EBA002ACDFB /* QGHomeTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeTopicCell.m; sourceTree = "<group>"; };
+		D080EFC322525118002ACDFB /* QGAllHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAllHeader.pch; sourceTree = "<group>"; };
+		D080EFC42252513D002ACDFB /* QGHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHeaders.h; sourceTree = "<group>"; };
+		D080EFC522526A42002ACDFB /* QGHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeModel.h; sourceTree = "<group>"; };
+		D080EFC622526A42002ACDFB /* QGHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +146,7 @@
 			children = (
 				D080EF5C2251180D002ACDFB /* Tool */,
 				D080EF5B22511805002ACDFB /* Other */,
+				D080EFAD22524B42002ACDFB /* Model */,
 				D080EF5A225117E9002ACDFB /* Category */,
 				D080EF59225117E5002ACDFB /* View */,
 				D080EF58225117DC002ACDFB /* Controller */,
@@ -168,6 +198,14 @@
 		D080EF4322508E4F002ACDFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D080EFB122524C6F002ACDFB /* QGHomeSlierModel.h */,
+				D080EFB222524C6F002ACDFB /* QGHomeSlierModel.m */,
+				D080EFBA22524E48002ACDFB /* QGHomeCategoryModel.h */,
+				D080EFBB22524E48002ACDFB /* QGHomeCategoryModel.m */,
+				D080EFBD22524E72002ACDFB /* QGHomeTopicModel.h */,
+				D080EFBE22524E72002ACDFB /* QGHomeTopicModel.m */,
+				D080EFC522526A42002ACDFB /* QGHomeModel.h */,
+				D080EFC622526A42002ACDFB /* QGHomeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +213,12 @@
 		D080EF4522508E67002ACDFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D080EFAA22524949002ACDFB /* QGHomeSliderCell.h */,
+				D080EFAB22524949002ACDFB /* QGHomeSliderCell.m */,
+				D080EFB422524C8A002ACDFB /* QGHomeCategoryCell.h */,
+				D080EFB522524C8A002ACDFB /* QGHomeCategoryCell.m */,
+				D080EFC022524EBA002ACDFB /* QGHomeTopicCell.h */,
+				D080EFC122524EBA002ACDFB /* QGHomeTopicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +287,8 @@
 			children = (
 				D080EF55225114BE002ACDFB /* QGTabbar.h */,
 				D080EF56225114BE002ACDFB /* QGTabbar.m */,
+				D080EFA7225248C2002ACDFB /* QGTableViewCell.h */,
+				D080EFA8225248C2002ACDFB /* QGTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +307,8 @@
 			children = (
 				D080EF1622508887002ACDFB /* QGAppDelegate.h */,
 				D080EF1722508887002ACDFB /* QGAppDelegate.m */,
+				D080EFC322525118002ACDFB /* QGAllHeader.pch */,
+				D080EFC42252513D002ACDFB /* QGHeaders.h */,
 				D080EF252250888C002ACDFB /* main.m */,
 			);
 			path = Other;
@@ -271,6 +319,15 @@
 			children = (
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		D080EFAD22524B42002ACDFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D080EFAE22524B75002ACDFB /* QGModel.h */,
+				D080EFAF22524B75002ACDFB /* QGModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,15 +455,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				D080EF262250888C002ACDFB /* main.m in Sources */,
+				D080EFB322524C6F002ACDFB /* QGHomeSlierModel.m in Sources */,
+				D080EFB022524B75002ACDFB /* QGModel.m in Sources */,
 				D080EF3B22508DA8002ACDFB /* QGHomeVC.m in Sources */,
+				D080EFBC22524E48002ACDFB /* QGHomeCategoryModel.m in Sources */,
 				D080EF5F22511891002ACDFB /* UIView+Extension.m in Sources */,
+				D080EFA9225248C2002ACDFB /* QGTableViewCell.m in Sources */,
+				D080EFBF22524E72002ACDFB /* QGHomeTopicModel.m in Sources */,
+				D080EFC222524EBA002ACDFB /* QGHomeTopicCell.m in Sources */,
 				D080EF1822508887002ACDFB /* QGAppDelegate.m in Sources */,
 				D080EF3822508D8D002ACDFB /* QGBaseVC.m in Sources */,
 				D080EF3522508A01002ACDFB /* QGNavigationController.m in Sources */,
 				D080EF57225114BE002ACDFB /* QGTabbar.m in Sources */,
 				D080EF4B22508EBC002ACDFB /* QGPublishVC.m in Sources */,
+				D042711122526FE300FB1A26 /* QGHomeModel.m in Sources */,
+				D080EFAC22524949002ACDFB /* QGHomeSliderCell.m in Sources */,
 				D080EF5422510830002ACDFB /* QGArticleVC.m in Sources */,
 				D080EF32225089BD002ACDFB /* QGTabbarController.m in Sources */,
+				D080EFB622524C8A002ACDFB /* QGHomeCategoryCell.m in Sources */,
 				D080EF5122508ED0002ACDFB /* QGMineVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +521,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/主要/Other/QGAllHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -512,6 +580,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -533,6 +602,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UAMLXR22D;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QGProject/主要/Other/QGAllHeader.pch";
 				INFOPLIST_FILE = QGProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -549,6 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UAMLXR22D;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = QGProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
