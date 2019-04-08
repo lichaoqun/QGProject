@@ -19,6 +19,7 @@
 #import <YYModel/YYModel.h>
 
 // - MARK: <-- 拖入工程中 -->
+#import "QGUserManager.h"
 #import "DeviceHelper.h"
 #import "QGDefines.h"
 #import "QGConst.h"

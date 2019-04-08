@@ -8,25 +8,24 @@
 
 #import "QGModel.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface QGUserModel : QGModel
  
-/** 用户名 */
-@property(nonatomic, copy)NSString *userName;
+/** 用户昵称 */
+@property(nonatomic, copy)NSString *nickName;
 
 /** 用户头像 */
-@property(nonatomic, copy)NSString *userIcon;
+@property(nonatomic, copy)NSString *avatar;
 
-/** 用户手机号 */
-@property(nonatomic, copy)NSString *userPhoneNum;
+/** 用户账号 */
+@property(nonatomic, copy)NSString *userName;
 
 /** 用户 ID */
 @property(nonatomic, copy)NSString *userId;
+
+/** 认证机构名称 */
+@property (nonatomic, copy) NSString *orgName;
 
 /** 用户的token */
 @property(nonatomic, copy)NSString *token;
 
 @end
-
-NS_ASSUME_NONNULL_END

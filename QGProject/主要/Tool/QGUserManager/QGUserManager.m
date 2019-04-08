@@ -19,14 +19,28 @@ static QGUserManager *userManager_;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         userManager_ = [[QGUserManager alloc]init];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setTokenNULL) name:kTokenPast object:nil];
     });
     return userManager_;
 }
 
++(void)setTokenNULL{
+    [QGUserManager shareMgr].userModel.token = nil;
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kTokenSaveKey];
+}
+
+// - MARK: <-- get 方法 -->
+/** token */
+-(NSString *)token{
+    if (userManager_.userModel.token) return userManager_.userModel.token;
+    return [[NSUserDefaults standardUserDefaults]objectForKey:kTokenSaveKey];
+
+}
+
 // - MARK: <-- 登录页面 -->
 /** 显示登录页面 */
-+(void)loginComplete:(void(^)(QGUserModel *userModel))complete{
-    QGNavigationController *nav = [[QGNavigationController alloc]initWithRootViewController:[[QGLoginVC alloc]init]];
++(void)showLoginVCComplete:(void(^)(QGUserModel *userModel))complete{
+    QGNavigationController *nav = [[QGNavigationController alloc]initWithRootViewController:[[QGLoginVC alloc]initWithLoginComplete:complete]];
     [[QGControllerTool getRootNavVC] presentViewController:nav animated:YES completion:nil];
 }
 

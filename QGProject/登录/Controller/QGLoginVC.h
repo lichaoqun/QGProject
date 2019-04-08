@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QGLoginVC : QGBaseVC
 
+/** 初始化登录页面和登陆成功的回调 */
+- (instancetype)initWithLoginComplete:(void(^)(QGUserModel *userModel))complete;
+
 @end
 
 NS_ASSUME_NONNULL_END

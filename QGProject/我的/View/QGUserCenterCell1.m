@@ -31,8 +31,13 @@
 // - MARK: <-- 重写 set方法 -->
 -(void)setUserModel:(QGUserModel *)userModel{
     _userModel = userModel;
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:userModel.userIcon]];
-    self.nameLabel.text = userModel.userName;
+    if ([QGUserManager shareMgr].token) {
+        [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatar]];
+        self.nameLabel.text = userModel.nickName;
+    }else{
+        self.headerImageView.image = [UIImage imageNamed:@"xx"];
+         self.nameLabel.text = @"请登录";
+    }
 }
 
 // - MARK: <-- 懒加载 -->

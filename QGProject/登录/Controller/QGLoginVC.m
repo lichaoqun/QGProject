@@ -17,10 +17,21 @@
 /** 倒计时的数字 */
 @property (nonatomic, assign) int countNum;
 
+/** 登录成功回调的 block */
+@property (nonatomic, copy) void(^loginComplete)(QGUserModel *) ;
+
 
 @end
 
 @implementation QGLoginVC
+
+- (instancetype)initWithLoginComplete:(void(^)(QGUserModel *userModel))complete{
+    self = [super init];
+    if (self) {
+        self.loginComplete = complete;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -128,7 +139,14 @@
 /** 登录按钮 */
 -(void)onLoginButtonClick{
     [QGRequestTool loginWithPhoneNum:nil verificationCode:nil complete:^(QGResponeModel *responeModel) {
-        NSLog(@"%@", responeModel);
+        if (responeModel.code == 0) {
+            QGUserModel *model = [QGUserModel yy_modelWithJSON:responeModel.data];
+            [QGUserManager shareMgr].userModel = model;
+            !self.loginComplete ? : self.loginComplete(model);
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        }else{
+            [YJProgressHUD showMessage:responeModel.msg inView:self.view];
+        }
     }];
 }
 

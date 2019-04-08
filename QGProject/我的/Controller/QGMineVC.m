@@ -29,6 +29,18 @@ static NSString * const kUserCenterCell2ID = @"kUserCenterCell2ID";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupUI];
+    // - token 过期的处理
+    [self addTokenPassNoti];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [QGRequestTool loginWithPhoneNum:nil verificationCode:nil complete:^(QGResponeModel *responeModel) {
+        if (responeModel.code == 0) {
+        }else{
+            [YJProgressHUD showMessage:responeModel.msg inView:self.view];
+        }
+    }];
 }
 
 // - MARK: <-- 绘制 UI -->
@@ -61,7 +73,7 @@ static NSString * const kUserCenterCell2ID = @"kUserCenterCell2ID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         QGUserCenterCell1 *cell = [tableView dequeueReusableCellWithIdentifier:kUserCenterCell1ID forIndexPath:indexPath];
-        cell.userModel = [[QGUserModel alloc]init];
+        cell.userModel = [QGUserManager shareMgr].userModel;
         return cell;
     }else{
         QGUserCenterCell2 *cell = [tableView dequeueReusableCellWithIdentifier:kUserCenterCell2ID forIndexPath:indexPath];
@@ -83,8 +95,10 @@ static NSString * const kUserCenterCell2ID = @"kUserCenterCell2ID";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (![QGUserManager shareMgr].userModel.token) {
-        [QGUserManager loginComplete:nil];
+    if (![QGUserManager shareMgr].token) {
+        [QGUserManager showLoginVCComplete:^(QGUserModel * _Nonnull userModel) {
+            [tableView reloadData];
+        }];
         return;
     }
     if (indexPath.section == 0) {

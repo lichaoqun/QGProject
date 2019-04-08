@@ -20,10 +20,10 @@
 }
 
 -(void)addTokenPassNoti{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popToRootVC) name:kTokenPast object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenPastDo) name:kTokenPast object:nil];
 }
 
--(void)popToRootVC{
+-(void)tokenPastDo{
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

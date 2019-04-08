@@ -14,12 +14,14 @@
 + (NSURLSessionTask *)GET:(NSString *)URL
                parameters:(id)parameters
                  complete:(QGRequestComplete)complete{
+    if ([QGUserManager shareMgr].token)  [PPNetworkHelper setValue:[QGUserManager shareMgr].token forHTTPHeaderField:@"token"];
     return [PPNetworkHelper GET:URL parameters:parameters success:^(id responseObject) {
-        QGResponeModel *requestModel = [QGResponeModel yy_modelWithJSON:responseObject];
-        !complete ? : complete(requestModel);
+        QGResponeModel *responeModel = [QGResponeModel yy_modelWithJSON:responseObject];
+        if (responeModel.code == 200) [[NSNotificationCenter defaultCenter] postNotificationName:kTokenPast object:nil];
+        !complete ? : complete(responeModel);
     } failure:^(NSError *error) {
-        QGResponeModel *requestModel = [QGResponeModel failureModel];
-        !complete ? : complete(requestModel);
+        QGResponeModel *responeModel = [QGResponeModel failureModel];
+        !complete ? : complete(responeModel);
     }];
 }
 
@@ -27,12 +29,14 @@
 + (NSURLSessionTask *)POST:(NSString *)URL
                 parameters:(id)parameters
                   complete:(QGRequestComplete)complete{
+    if ([QGUserManager shareMgr].token)  [PPNetworkHelper setValue:[QGUserManager shareMgr].token forHTTPHeaderField:@"token"];
     return [PPNetworkHelper POST:URL parameters:parameters success:^(id responseObject) {
-        QGResponeModel *requestModel = [QGResponeModel yy_modelWithJSON:responseObject];
-        !complete ? : complete(requestModel);
+        QGResponeModel *responeModel = [QGResponeModel yy_modelWithJSON:responseObject];
+        if (responeModel.code == 200) [[NSNotificationCenter defaultCenter] postNotificationName:kTokenPast object:nil];
+        !complete ? : complete(responeModel);
     } failure:^(NSError *error) {
-        QGResponeModel *requestModel = [QGResponeModel failureModel];
-        !complete ? : complete(requestModel);
+        QGResponeModel *responeModel = [QGResponeModel failureModel];
+        !complete ? : complete(responeModel);
     }];
 }
 
@@ -46,12 +50,14 @@
                                          imageType:(NSString *)imageType
                                           progress:(PPHttpProgress)progress
                                           complete:(QGRequestComplete)complete{
+    if ([QGUserManager shareMgr].token)  [PPNetworkHelper setValue:[QGUserManager shareMgr].token forHTTPHeaderField:@"token"];
     return [PPNetworkHelper uploadImagesWithURL:URL parameters:parameters name:name images:images fileNames:fileNames imageScale:(CGFloat)imageScale imageType:imageType progress:progress success:^(id responseObject) {
-        QGResponeModel *requestModel = [QGResponeModel yy_modelWithJSON:responseObject];
-        !complete ? : complete(requestModel);
+        QGResponeModel *responeModel = [QGResponeModel yy_modelWithJSON:responseObject];
+        if (responeModel.code == 200) [[NSNotificationCenter defaultCenter] postNotificationName:kTokenPast object:nil];
+        !complete ? : complete(responeModel);
     } failure:^(NSError *error) {
-        QGResponeModel *requestModel = [QGResponeModel failureModel];
-        !complete ? : complete(requestModel);
+        QGResponeModel *responeModel = [QGResponeModel failureModel];
+        !complete ? : complete(responeModel);
     }];
 }
 

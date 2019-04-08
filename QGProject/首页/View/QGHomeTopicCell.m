@@ -161,7 +161,7 @@
         UIImageView *imgView = [[UIImageView alloc]init];
         [self.contentView addSubview:imgView];
         _topicDesImageView = imgView;
-        imgView.contentMode = UIViewContentModeScaleToFill;
+        imgView.contentMode = UIViewContentModeScaleAspectFit;
         [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(70, 70));
             make.top.equalTo(self.contentView).offset(10);

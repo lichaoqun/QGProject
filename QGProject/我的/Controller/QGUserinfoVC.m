@@ -17,6 +17,9 @@ static NSString * const kUserinfoCell2ID = @"kUserinfoCell2ID";
 
 @interface QGUserinfoVC ()<UITableViewDataSource, UITableViewDelegate>
 
+/** <#注释#> */
+@property (nonatomic, weak) UITableView *userCenterTabView;
+
 @end
 
 @implementation QGUserinfoVC
@@ -40,6 +43,8 @@ static NSString * const kUserinfoCell2ID = @"kUserinfoCell2ID";
     [userCenterTabView registerClass:[QGUserInfoCell1 class] forCellReuseIdentifier:kUserinfoCell1ID];
     [userCenterTabView registerClass:[QGUserInfoCell2 class] forCellReuseIdentifier:kUserinfoCell2ID];
     [self.view addSubview:userCenterTabView];
+    self.userCenterTabView = userCenterTabView;
+    
     [userCenterTabView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
         make.bottom.equalTo(self.view);
@@ -54,16 +59,16 @@ static NSString * const kUserinfoCell2ID = @"kUserinfoCell2ID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         QGUserInfoCell1 *cell = [tableView dequeueReusableCellWithIdentifier:kUserinfoCell1ID forIndexPath:indexPath];
-        cell.userModel = [[QGUserModel alloc]init];
+        cell.userModel = [QGUserManager shareMgr].userModel;
         return cell;
     }else{
         QGUserInfoCell2 *cell = [tableView dequeueReusableCellWithIdentifier:kUserinfoCell2ID forIndexPath:indexPath];
         if (indexPath.row == 1) {
             cell.mainTitleLabel.text = @"昵称";
-            cell.subTitleLabel.text = [[QGUserModel alloc]init].userName;
+            cell.subTitleLabel.text = [QGUserManager shareMgr].userModel.nickName;
         }else if (indexPath.row == 2) {
             cell.mainTitleLabel.text = @"电话";
-            cell.subTitleLabel.text = [[QGUserModel alloc]init].userPhoneNum;
+            cell.subTitleLabel.text = [QGUserManager shareMgr].userModel.userName;
         }
         return cell;
     }
@@ -87,6 +92,11 @@ static NSString * const kUserinfoCell2ID = @"kUserinfoCell2ID";
     }
 }
 
+// - token 过期的处理
+- (void)tokenPastDo{
+    [self.userCenterTabView reloadData];
+}
+
 /** 更换头像 */
 -(void)changeUserIcon{
     [ZZQAvatarPicker startSelected:^(UIImage * _Nonnull image) {
@@ -94,8 +104,5 @@ static NSString * const kUserinfoCell2ID = @"kUserinfoCell2ID";
         NSLog(@"%@", image);
     }];
 }
-
-/** 修改昵称 */
-
 
 @end

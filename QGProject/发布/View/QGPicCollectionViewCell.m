@@ -34,6 +34,7 @@
     if (!_uploadImageView) {
         UIImageView *imgV = [[UIImageView alloc]init];
         imgV.userInteractionEnabled = YES;
+        imgV.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:imgV];
         _uploadImageView = imgV;
         [imgV mas_makeConstraints:^(MASConstraintMaker *make) {

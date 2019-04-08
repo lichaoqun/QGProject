@@ -14,7 +14,7 @@
 +(instancetype)failureModel{
     QGResponeModel *failureModel = [[QGResponeModel alloc]init];
     failureModel.code = -112233;
-    failureModel.msg = @"";
+    failureModel.msg = @"网络错误,请重试~";
     failureModel.data = nil;
     return failureModel;
 }

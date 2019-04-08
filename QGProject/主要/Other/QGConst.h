@@ -12,4 +12,7 @@
 /** token 过期 */
 static NSString *const kTokenPast = @"kTokenPast";
 
+/** 本地存储 token 的 key */
+static NSString *const kTokenSaveKey = @"kTokenSaveKey";
+
 #endif /* QGConst_h */
