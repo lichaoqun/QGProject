@@ -36,6 +36,7 @@
         [backBtton addTarget:self action:@selector(backBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtton];
         viewController.navigationItem.leftBarButtonItem = backItem;
+        viewController.hidesBottomBarWhenPushed = YES;
     }
 }
 

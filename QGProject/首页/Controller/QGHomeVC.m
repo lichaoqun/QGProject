@@ -15,6 +15,7 @@
 #import "QGHomeSlierModel.h"
 #import "QGHomeCategoryModel.h"
 #import "QGHomeTopicModel.h"
+#import "QGPublishChooseCategoryVC.h"
 
 static NSString * const homeSliderCellID = @"homeSliderCellID";
 static NSString * const homeCategoryCellID = @"homeCategoryCellID";
@@ -58,32 +59,33 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
     model2.data_type = 1;
     model2.data_title = @"分类";
     model2.data_content = @[
-                        [[QGHomeCategoryCell alloc]init],
-                        [[QGHomeCategoryCell alloc]init],
-                        [[QGHomeCategoryCell alloc]init],
-                        [[QGHomeCategoryCell alloc]init],
-                        [[QGHomeCategoryCell alloc]init],
-                        [[QGHomeCategoryCell alloc]init],
-                        [[QGHomeCategoryCell alloc]init],
-                        [[QGHomeCategoryCell alloc]init]
+                        [[QGHomeCategoryModel alloc]init],
+                        [[QGHomeCategoryModel alloc]init],
+                        [[QGHomeCategoryModel alloc]init],
+                        [[QGHomeCategoryModel alloc]init],
+                        [[QGHomeCategoryModel alloc]init],
+                        [[QGHomeCategoryModel alloc]init],
+                        [[QGHomeCategoryModel alloc]init],
+                        [[QGHomeCategoryModel alloc]init]
                         ];
+    [QGPublishChooseCategoryVC setupCategoryModels:model2.data_content];
     QGHomeModel *model3 = [[QGHomeModel alloc]init];
     model3.data_type = 2;
     model3.data_title = @"帖子";
     model3.data_content = @[
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init],
-                        [[QGHomeTopicCell alloc]init]
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init],
+                        [[QGHomeTopicModel alloc]init]
                         ];
     [self.modelsArray addObjectsFromArray:@[model1, model2, model3]];
     [self.tableView reloadData];
@@ -94,9 +96,7 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 -(UITableView *)tableView{
     if (!_tableView) {
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height) style:UITableViewStylePlain];
-        if (@available(iOS 11.0, *)) {
-            tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        }
+        tableView.showsVerticalScrollIndicator = NO;
         [self.view addSubview:tableView];
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -106,8 +106,17 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
         [tableView registerClass:[QGHomeCategoryCell class] forCellReuseIdentifier:homeCategoryCellID];
         [tableView registerClass:[QGHomeTopicCell class] forCellReuseIdentifier:homeTopicCellID];
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.top.bottom.equalTo(self.view);
+            make.left.right.top.equalTo(self.view);
+            
+            if (@available(iOS 11.0, *)) {
+                tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+                make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+                
+            }else{
+                make.bottom.equalTo(self.view).offset(-49);
+            }
         }];
+
     }
     return _tableView;
 }
@@ -146,12 +155,26 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
         return cell;
     }else if (model.data_type == QGHomeDataTypeCategory){
         QGHomeCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCategoryCellID forIndexPath:indexPath];
+        cell.categoryModelsArray = model.data_content;
         return cell;
     }else if (model.data_type == QGHomeDataTypeTopic){
         QGHomeTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:homeTopicCellID forIndexPath:indexPath];
+        cell.topicModel = model.data_content[indexPath.row];
         return cell;
     }
     return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    QGHomeModel *model = self.modelsArray[indexPath.section];
+    if (model.data_type == QGHomeDataTypeSlider) {
+        return 200;
+    }else if (model.data_type == QGHomeDataTypeCategory){
+        return 160;
+    }else if (model.data_type == QGHomeDataTypeTopic){
+        return 150;
+    }
+    return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -159,11 +182,19 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
     if (model.data_type == QGHomeDataTypeSlider) {
         return 200;
     }else if (model.data_type == QGHomeDataTypeCategory){
-        return 140;
+        return 160;
     }else if (model.data_type == QGHomeDataTypeTopic){
-        return 80;
+        QGHomeTopicModel *topicModel = model.data_content[indexPath.row];
+        return topicModel.cellHeight;
     }
     return 0;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    QGArticleVC *articleVC = [[QGArticleVC alloc]init];
+    [self.navigationController pushViewController:articleVC animated:YES];
 }
 
 /** 轮播图图片点击的回调 */

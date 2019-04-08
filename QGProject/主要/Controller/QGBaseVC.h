@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QGBaseVC : UIViewController
 
+-(void)addTokenPassNoti;
 @end
 
 NS_ASSUME_NONNULL_END

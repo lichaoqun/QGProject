@@ -8,7 +8,7 @@
 
 #import "QGTabbarController.h"
 #import "QGHomeVC.h"
-#import "QGPublishVC.h"
+#import "QGPublishChooseCategoryVC.h"
 #import "QGMineVC.h"
 #import "QGNavigationController.h"
 #import "QGTabbar.h"
@@ -47,31 +47,27 @@
     self.fd_prefersNavigationBarHidden = YES;
     
     // - 配置视图控制器
-    QGNavigationController *homeNav = [self getChildNav:[[QGHomeVC alloc]init] title:@"首页" normalImageName:@"tabbar_home" selectImageName:@"tabbar_home_selected"];
-    QGNavigationController *mineNav = [self getChildNav:[[QGMineVC alloc]init] title:@"我的" normalImageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
-    self.viewControllers = @[homeNav, mineNav];
+     QGBaseVC *vc1 = [self getChildNav:[[QGHomeVC alloc]init] title:@"首页" normalImageName:@"tabbar_home" selectImageName:@"tabbar_home_selected"];
+    QGBaseVC *vc2 = [self getChildNav:[[QGMineVC alloc]init] title:@"我的" normalImageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
+    self.viewControllers = @[vc1, vc2];
 }
 
 /** 获取视图控制器 */
--(QGNavigationController *)getChildNav:(QGBaseVC *)vc title:(NSString *)title normalImageName:(NSString *)normalImageName selectImageName:(NSString *)selectImageName{
+-(QGBaseVC *)getChildNav:(QGBaseVC *)vc title:(NSString *)title normalImageName:(NSString *)normalImageName selectImageName:(NSString *)selectImageName{
     
-    // - 隐藏导航栏
-    QGNavigationController *nav = [[QGNavigationController alloc]initWithRootViewController:vc];
-    vc.fd_prefersNavigationBarHidden = YES;
-
     // - 配置 tabbar
     UITabBarItem *item = [[UITabBarItem alloc]init];
     item.title = title;
     item.image = [UIImage imageNamed:normalImageName];
     item.selectedImage = [[UIImage imageNamed:selectImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    nav.tabBarItem = item;
-    return nav;
+    vc.tabBarItem = item;
+    return vc;
 }
 
 // - MARK: <-- 代理方法 -->
 -(void)tabBarDidClickPlusButton:(QGTabbar *)tabBar{
-    QGNavigationController *nav = [[QGNavigationController alloc]initWithRootViewController:[[QGPublishVC alloc]init]];
-    [self.navigationController presentViewController:nav animated:YES completion:nil];
+    QGPublishChooseCategoryVC *vc = [[QGPublishChooseCategoryVC alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

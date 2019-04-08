@@ -8,6 +8,9 @@ target 'QGProject' do
  	pod 'Masonry'
  	pod 'PPNetworkHelper'
  	pod 'SDWebImage', '~> 4.0'
-    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'YJProgressHUD'
     pod 'SDCycleScrollView','~> 1.75'
+    pod 'YYCategories'
+    pod 'pop'
+    pod 'TZImagePickerController'
 end

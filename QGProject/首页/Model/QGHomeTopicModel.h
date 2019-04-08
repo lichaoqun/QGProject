@@ -27,12 +27,23 @@ NS_ASSUME_NONNULL_BEGIN
 /** 帖子内容的作者的头像 */
 @property(nonatomic, copy)NSString *content_author_icon_url;
 
+/** 帖子内容的作者的昵称 */
+@property(nonatomic, copy)NSString *content_author_name;
+
 /** 帖子内容的发布时间 */
 @property(nonatomic, assign)NSTimeInterval content_publish_time;
 
 /** 帖子内容的分类 */
 @property(nonatomic, copy)NSString *content_publish_cate;
 
+/** 是否是图片模式的 cell */
+@property(nonatomic, assign, readonly)BOOL showDesImageView;
+
+/** 格式化后的时间间隔 */
+@property(nonatomic, copy, readonly)NSString *formatTimeInterval;
+
+/** cell的高度 */
+@property(nonatomic, assign)CGFloat cellHeight;
 @end
 
 NS_ASSUME_NONNULL_END

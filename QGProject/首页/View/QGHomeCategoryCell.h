@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface QGHomeCategoryCell : QGTableViewCell
 
 /** 轮播图的数组 */
-@property(nonatomic, strong)NSArray <QGHomeCategoryModel *> *sliderModesArray;
+@property(nonatomic, strong)NSArray <QGHomeCategoryModel *> *categoryModelsArray;
 
 @end
 

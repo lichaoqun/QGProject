@@ -6,17 +6,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QGProject/&#x9996;&#x9875;/View/QGHomeSliderCell.m"
-            timestampString = "575829659.264191"
+            filePath = "QGProject/&#x53d1;&#x5e03;/Controller/QGPublishTopicVC.m"
+            timestampString = "576233417.0373271"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-cycleScrollView:didSelectItemAtIndex:"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[QGPublishTopicVC collectionView:didSelectItemAtIndexPath:]"
+                  moduleName = "QGProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hh/Desktop/QGProject/QGProject/%E5%8F%91%E5%B8%83/Controller/QGPublishTopicVC.m"
+                  timestampString = "576161547.636023"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__60-[QGPublishTopicVC collectionView:didSelectItemAtIndexPath:]_block_invoke"
+                  moduleName = "QGProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hh/Desktop/QGProject/QGProject/%E5%8F%91%E5%B8%83/Controller/QGPublishTopicVC.m"
+                  timestampString = "576161547.638926"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

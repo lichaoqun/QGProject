@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface QGPublishVC : QGBaseVC
+@interface QGPublishChooseCategoryVC : QGBaseVC
+
+/** 设置分类的model */
++(void)setupCategoryModels:(NSArray *)categoryModelsArray;
 
 @end
 
