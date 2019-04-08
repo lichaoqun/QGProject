@@ -1,24 +1,23 @@
 //
-//  QGArticleVC.m
+//  QGTopicDetailVC.m
 //  QGProject
 //
-//  Created by QG on 2019/3/31.
+//  Created by QG on 2019/4/8.
 //  Copyright © 2019年 xinxianzhizao. All rights reserved.
 //
 
-#import "QGArticleVC.h"
-#import <UINavigationController+FDFullscreenPopGesture.h>
-@interface QGArticleVC ()
+#import "QGTopicDetailVC.h"
+
+@interface QGTopicDetailVC ()
 
 @end
 
-@implementation QGArticleVC
+@implementation QGTopicDetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor yellowColor];
-    [self.navigationController setNavigationBarHidden:NO];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 /*

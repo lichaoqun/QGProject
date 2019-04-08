@@ -82,7 +82,7 @@
     // - 标题和内容
     self.topicTitleLabel.text = topicModel.content_title;
     self.topicDetailTitleLabel.text = topicModel.content_summary;
-    self.publishTimeLabel.text = topicModel.formatTimeInterval;
+    self.publishTimeLabel.text = [NSString formatTimeWithInterval:topicModel.content_publish_time];
     
     // - 发帖人信息
     [self.author_iconImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.content_author_icon_url]];

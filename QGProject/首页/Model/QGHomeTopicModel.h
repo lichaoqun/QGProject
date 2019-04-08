@@ -39,9 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** 是否是图片模式的 cell */
 @property(nonatomic, assign, readonly)BOOL showDesImageView;
 
-/** 格式化后的时间间隔 */
-@property(nonatomic, copy, readonly)NSString *formatTimeInterval;
-
 /** cell的高度 */
 @property(nonatomic, assign)CGFloat cellHeight;
 @end

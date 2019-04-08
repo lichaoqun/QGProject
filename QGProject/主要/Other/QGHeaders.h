@@ -7,7 +7,6 @@
 //
 
 // - MARK: <-- pod 中 -->
-#import "UIView+Extension.h"
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #import <Masonry.h>
 #import <PPNetworkHelper.h>
@@ -26,3 +25,5 @@
 #import "QGControllerTool.h"
 #import "QGSubmitButton.h"
 #import "QGRequestTool.h"
+#import "UIView+Extension.h"
+#import "NSString+Extension.h"

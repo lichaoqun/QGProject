@@ -7,7 +7,6 @@
 //
 
 #import "QGPublishChooseCategoryVC.h"
-#import "QGArticleVC.h"
 #import "LMHVerticalButton.h"
 #import "QGHomeCategoryModel.h"
 #import "QGPublishTopicVC.h"

@@ -38,7 +38,7 @@
         mainTitleLabel.textColor = [UIColor colorWithHexString:@"000000"];
 
         [mainTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.contentView).offset(18);
+            make.left.equalTo(self.contentView).offset(cellLRPadding);
             make.centerY.equalTo(self.contentView);
         }];
 

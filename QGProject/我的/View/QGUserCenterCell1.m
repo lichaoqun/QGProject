@@ -35,7 +35,7 @@
         [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatar]];
         self.nameLabel.text = userModel.nickName;
     }else{
-        self.headerImageView.image = [UIImage imageNamed:@"xx"];
+        self.headerImageView.image = [UIImage imageNamed:@"defautl_user_icon"];
          self.nameLabel.text = @"请登录";
     }
 }
@@ -54,7 +54,7 @@
         [headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(wh, wh));
             make.centerY.equalTo(self.contentView);
-            make.left.equalTo(self.contentView).offset(18);
+            make.left.equalTo(self.contentView).offset(cellLRPadding);
         }];
     }
     return _headerImageView;

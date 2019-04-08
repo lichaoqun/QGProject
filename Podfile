@@ -6,7 +6,7 @@ target 'QGProject' do
  	pod 'FDFullscreenPopGesture', '1.1'
  	pod 'YYModel'
  	pod 'Masonry'
- 	pod 'PPNetworkHelper'
+ 	pod 'PPNetworkHelper' 
  	pod 'SDWebImage', '~> 4.0'
     pod 'YJProgressHUD'
     pod 'SDCycleScrollView','~> 1.75'

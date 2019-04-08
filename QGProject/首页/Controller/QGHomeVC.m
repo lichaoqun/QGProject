@@ -7,7 +7,7 @@
 //
 
 #import "QGHomeVC.h"
-#import "QGArticleVC.h"
+#import "QGTopicDetailVC.h"
 #import "QGHomeSliderCell.h"
 #import "QGHomeCategoryCell.h"
 #import "QGHomeTopicCell.h"
@@ -193,8 +193,8 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    QGArticleVC *articleVC = [[QGArticleVC alloc]init];
-    [self.navigationController pushViewController:articleVC animated:YES];
+    QGTopicDetailVC *detailVC = [[QGTopicDetailVC alloc]init];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 /** 轮播图图片点击的回调 */

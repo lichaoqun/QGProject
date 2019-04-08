@@ -7,7 +7,6 @@
 //
 
 #import "QGMineVC.h"
-#import "QGArticleVC.h"
 #import "QGNavigationController.h"
 #import "QGUserCenterCell1.h"
 #import "QGUserCenterCell2.h"
