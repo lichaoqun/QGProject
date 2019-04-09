@@ -7,7 +7,7 @@
 //
 
 #import "QGTableViewCell.h"
-#import "QGHomeSlierModel.h"
+#import "QGAllHomeModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

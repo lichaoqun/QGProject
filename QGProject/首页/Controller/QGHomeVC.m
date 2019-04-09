@@ -12,9 +12,7 @@
 #import "QGHomeCategoryCell.h"
 #import "QGHomeTopicCell.h"
 #import "QGHomeModel.h"
-#import "QGHomeSlierModel.h"
-#import "QGHomeCategoryModel.h"
-#import "QGHomeTopicModel.h"
+#import "QGAllHomeModel.h"
 #import "QGPublishChooseCategoryVC.h"
 
 static NSString * const homeSliderCellID = @"homeSliderCellID";
@@ -41,54 +39,38 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 // - MARK: <-- 网络请求 -->
 /** 请求数据 */
 -(void)setupData{
-//    [PPNetworkHelper GET:nil parameters:nil success:^(id responseObject) {
-//
-//    } failure:^(NSError *error) {
-//
-//    }];
-    QGHomeModel *model1 = [[QGHomeModel alloc]init];
-    model1.data_type = 0;
-    model1.data_title = @"轮播图";
-    model1.data_content = @[
-                       [[QGHomeSlierModel alloc]init],
-                       [[QGHomeSlierModel alloc]init],
-                       [[QGHomeSlierModel alloc]init],
-                       [[QGHomeSlierModel alloc]init],
-                       ];
-    QGHomeModel *model2 = [[QGHomeModel alloc]init];
-    model2.data_type = 1;
-    model2.data_title = @"分类";
-    model2.data_content = @[
-                        [[QGHomeCategoryModel alloc]init],
-                        [[QGHomeCategoryModel alloc]init],
-                        [[QGHomeCategoryModel alloc]init],
-                        [[QGHomeCategoryModel alloc]init],
-                        [[QGHomeCategoryModel alloc]init],
-                        [[QGHomeCategoryModel alloc]init],
-                        [[QGHomeCategoryModel alloc]init],
-                        [[QGHomeCategoryModel alloc]init]
-                        ];
-    [QGPublishChooseCategoryVC setupCategoryModels:model2.data_content];
-    QGHomeModel *model3 = [[QGHomeModel alloc]init];
-    model3.data_type = 2;
-    model3.data_title = @"帖子";
-    model3.data_content = @[
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init],
-                        [[QGHomeTopicModel alloc]init]
-                        ];
-    [self.modelsArray addObjectsFromArray:@[model1, model2, model3]];
-    [self.tableView reloadData];
+    [QGRequestTool getHomeDataComplete:^(QGResponeModel *responeModel) {
+        if (responeModel.code == 0) {
+            NSArray *dataArray = (NSArray *)responeModel.data;
+            for (NSDictionary *dic in dataArray) {
+                QGHomeModel *homeModel = [QGHomeModel yy_modelWithJSON:dic];
+                switch (homeModel.dataType) {
+                    case QGHomeDataTypeSlider:{
+                        NSArray *contentArray = [NSArray yy_modelArrayWithClass:[QGHomeSlierModel class] json:homeModel.dataContent];
+                        homeModel.dataContent = contentArray;
+                        break;
+                    }
+                    case QGHomeDataTypeCategory:{
+                        NSArray *contentArray = [NSArray yy_modelArrayWithClass:[QGHomeCategoryModel class] json:homeModel.dataContent];
+                        homeModel.dataContent = contentArray;
+                        [QGPublishChooseCategoryVC setupCategoryModels:homeModel.dataContent];
+                        break;
+                    }
+                    case QGHomeDataTypeTopic:{
+                        NSArray *contentArray = [NSArray yy_modelArrayWithClass:[QGHomeTopicModel class] json:homeModel.dataContent];
+                        homeModel.dataContent = contentArray;
+                        break;
+                    }
+                    default:
+                        break;
+                }
+                [self.modelsArray addObject:homeModel];
+            }
+            [self.tableView reloadData];
+        }else{
+            [YJProgressHUD showMessage:responeModel.msg inView:self.view];
+        }
+    }];
 }
 
 // - MARK: <-- 懒加载 -->
@@ -136,30 +118,30 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     QGHomeModel *model = self.modelsArray[section];
-    if (model.data_type == QGHomeDataTypeSlider) {
+    if (model.dataType == QGHomeDataTypeSlider) {
         return 1;
-    }else if (model.data_type == QGHomeDataTypeCategory){
+    }else if (model.dataType == QGHomeDataTypeCategory){
         return 1;
-    }else if (model.data_type == QGHomeDataTypeTopic){
-        return model.data_content.count;
+    }else if (model.dataType == QGHomeDataTypeTopic){
+        return model.dataContent.count;
     }
     return 0;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     QGHomeModel *model = self.modelsArray[indexPath.section];
-    if (model.data_type == QGHomeDataTypeSlider) {
+    if (model.dataType == QGHomeDataTypeSlider) {
         QGHomeSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:homeSliderCellID forIndexPath:indexPath];
-        cell.sliderModesArray = model.data_content;
+        cell.sliderModesArray = (NSArray<QGHomeSlierModel *> * )model.dataContent;
         cell.delegate = self;
         return cell;
-    }else if (model.data_type == QGHomeDataTypeCategory){
+    }else if (model.dataType == QGHomeDataTypeCategory){
         QGHomeCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCategoryCellID forIndexPath:indexPath];
-        cell.categoryModelsArray = model.data_content;
+        cell.categoryModelsArray = (NSArray<QGHomeCategoryModel *> *)model.dataContent;
         return cell;
-    }else if (model.data_type == QGHomeDataTypeTopic){
+    }else if (model.dataType == QGHomeDataTypeTopic){
         QGHomeTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:homeTopicCellID forIndexPath:indexPath];
-        cell.topicModel = model.data_content[indexPath.row];
+        cell.topicModel = (QGHomeTopicModel *)model.dataContent[indexPath.row];
         return cell;
     }
     return nil;
@@ -167,11 +149,11 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     QGHomeModel *model = self.modelsArray[indexPath.section];
-    if (model.data_type == QGHomeDataTypeSlider) {
+    if (model.dataType == QGHomeDataTypeSlider) {
         return 200;
-    }else if (model.data_type == QGHomeDataTypeCategory){
+    }else if (model.dataType == QGHomeDataTypeCategory){
         return 160;
-    }else if (model.data_type == QGHomeDataTypeTopic){
+    }else if (model.dataType == QGHomeDataTypeTopic){
         return 150;
     }
     return 0;
@@ -179,12 +161,14 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     QGHomeModel *model = self.modelsArray[indexPath.section];
-    if (model.data_type == QGHomeDataTypeSlider) {
+    if (model.dataType == QGHomeDataTypeSlider) {
         return 200;
-    }else if (model.data_type == QGHomeDataTypeCategory){
-        return 160;
-    }else if (model.data_type == QGHomeDataTypeTopic){
-        QGHomeTopicModel *topicModel = model.data_content[indexPath.row];
+    }else if (model.dataType == QGHomeDataTypeCategory){
+        NSArray *categoryModelsArray = (NSArray<QGHomeCategoryModel *> *)model.dataContent;
+        NSInteger maxCount = MIN(2, ((categoryModelsArray.count + (itemCountPerRow - 1)) / itemCountPerRow));
+        return maxCount * 80;
+    }else if (model.dataType == QGHomeDataTypeTopic){
+        QGHomeTopicModel *topicModel = (QGHomeTopicModel *)model.dataContent[indexPath.row];
         return topicModel.cellHeight;
     }
     return 0;
@@ -199,6 +183,6 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 
 /** 轮播图图片点击的回调 */
 - (void)didSelectSliderModel:(QGHomeSlierModel *)sliderModel{
-    NSLog(@"%@", sliderModel.slider_title);
+    NSLog(@"%@", sliderModel.sliderTitle);
 }
 @end

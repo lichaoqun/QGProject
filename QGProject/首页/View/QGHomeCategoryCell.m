@@ -11,6 +11,8 @@
 
 static NSString *categoryCollectionViewCellID = @"categoryCollectionViewCellID";
 
+int const itemCountPerRow = 5;
+
 @interface QGCategoryCollectionCell : UICollectionViewCell
 
 /** 标题 */
@@ -60,8 +62,8 @@ static NSString *categoryCollectionViewCellID = @"categoryCollectionViewCellID";
 
 -(void)setCategoryModel:(QGHomeCategoryModel *)categoryModel{
     _categoryModel = categoryModel;
-    self.categoryTitleLabel.text = categoryModel.cate_name;
-    [self.categoryImageView sd_setImageWithURL:[NSURL URLWithString:categoryModel.cate_icon_url]];
+    self.categoryTitleLabel.text = categoryModel.cateName;
+    [self.categoryImageView sd_setImageWithURL:[NSURL URLWithString:categoryModel.cateIconUrl]];
 }
 
 @end
@@ -79,8 +81,8 @@ static NSString *categoryCollectionViewCellID = @"categoryCollectionViewCellID";
 // - MARK: <-- 懒加载 -->
 -(UICollectionView *)categoryCollectionView{
     if (!_categoryCollectionView) {
-        
-        JHHorizontalPageFlowlayout *layout = [[JHHorizontalPageFlowlayout alloc] initWithRowCount:2 itemCountPerRow:5];
+        NSInteger maxCount = MIN(2, ((self.categoryModelsArray.count + (itemCountPerRow - 1)) / itemCountPerRow));
+        JHHorizontalPageFlowlayout *layout = [[JHHorizontalPageFlowlayout alloc] initWithRowCount:maxCount itemCountPerRow:itemCountPerRow];
         [layout setColumnSpacing:5 rowSpacing:5 edgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];

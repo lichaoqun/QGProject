@@ -10,7 +10,7 @@
 #define QGConst_h
 
 /** 本地存储 token 的 key */
-static CGFloat const cellLRPadding = 18;
+static CGFloat const kCellLRPadding = 18;
 
 
 /** token 过期 */

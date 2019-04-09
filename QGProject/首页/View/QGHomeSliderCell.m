@@ -21,8 +21,8 @@
 // - MARK: <-- 重写 set 方法 -->
 -(void)setSliderModesArray:(NSArray<QGHomeSlierModel *> *)sliderModesArray{
     _sliderModesArray = sliderModesArray;
-    NSArray *urls = [sliderModesArray valueForKeyPath:@"slider_url"];
-    NSArray *titles = [sliderModesArray valueForKeyPath:@"slider_title"];
+    NSArray *urls = [sliderModesArray valueForKeyPath:@"sliderUrl"];
+    NSArray *titles = [sliderModesArray valueForKeyPath:@"sliderTitle"];
     self.sliderView.imageURLStringsGroup = urls;
     self.sliderView.titlesGroup = titles;
 }

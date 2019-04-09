@@ -8,7 +8,7 @@
 
 #import "QGPublishChooseCategoryVC.h"
 #import "LMHVerticalButton.h"
-#import "QGHomeCategoryModel.h"
+#import "QGAllHomeModel.h"
 #import "QGPublishTopicVC.h"
 
 static CGFloat const animationDelay = 0.1;
@@ -90,8 +90,8 @@ static NSArray *modelsArray_;
         
         // 5. 设置按钮的内容
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
-        [btn sd_setImageWithURL:[NSURL URLWithString:obj.cate_icon_url] forState:UIControlStateNormal];
-        [btn setTitle:obj.cate_name forState:UIControlStateNormal];
+        [btn sd_setImageWithURL:[NSURL URLWithString:obj.cateIconUrl] forState:UIControlStateNormal];
+        [btn setTitle:obj.cateName forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
         // 7.给按钮添加弹簧动画

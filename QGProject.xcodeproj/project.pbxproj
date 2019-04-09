@@ -14,6 +14,10 @@
 		340FF9F5225B1CE70095C6A8 /* QGRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 340FF9F4225B1CE70095C6A8 /* QGRequestTool.m */; };
 		340FF9FB225B23E50095C6A8 /* QGRequestTool+QGRequestBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 340FF9FA225B23E50095C6A8 /* QGRequestTool+QGRequestBaseTool.m */; };
 		340FF9FE225B25070095C6A8 /* QGResponeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 340FF9FD225B25070095C6A8 /* QGResponeModel.m */; };
+		3418C098225C6FB100525A9C /* QGTopicDetailTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3418C097225C6FB100525A9C /* QGTopicDetailTitleCell.m */; };
+		3418C09B225C70E400525A9C /* QGTopicCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3418C09A225C70E400525A9C /* QGTopicCategoryView.m */; };
+		3418C0A1225C87A600525A9C /* QGAllHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3418C0A0225C87A600525A9C /* QGAllHomeModel.m */; };
+		3418C0A4225C88D800525A9C /* QGAllTopicDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3418C0A3225C88D800525A9C /* QGAllTopicDetailModel.m */; };
 		D0101FA7225779E200A348EF /* QGPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FA6225779E200A348EF /* QGPicModel.m */; };
 		D0101FAD2257970900A348EF /* HWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FAC2257970900A348EF /* HWTextView.m */; };
 		D0101FB022579F1B00A348EF /* QGUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FAF22579F1B00A348EF /* QGUserModel.m */; };
@@ -28,10 +32,7 @@
 		D0101FD122589F0E00A348EF /* ZZQAvatarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FCB22589F0E00A348EF /* ZZQAvatarPicker.m */; };
 		D0101FD222589F0E00A348EF /* ZZQResourceSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FCC22589F0E00A348EF /* ZZQResourceSheetView.m */; };
 		D0101FD7225B915900A348EF /* QGTopicDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FD6225B915900A348EF /* QGTopicDetailVC.m */; };
-		D0101FDA225B928B00A348EF /* QGTopicDetailTextContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FD9225B928B00A348EF /* QGTopicDetailTextContentModel.m */; };
-		D0101FDD225B929F00A348EF /* QGTopicDetailImageContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FDC225B929F00A348EF /* QGTopicDetailImageContentModel.m */; };
 		D0101FE0225B92E700A348EF /* QGTopicDetailCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FDF225B92E700A348EF /* QGTopicDetailCommentModel.m */; };
-		D0101FE3225B94C600A348EF /* QGTopicDetailContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FE2225B94C600A348EF /* QGTopicDetailContentModel.m */; };
 		D0101FE6225B9EA000A348EF /* QGTopicDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FE5225B9EA000A348EF /* QGTopicDetailModel.m */; };
 		D0101FE9225BA14D00A348EF /* QGTopicDetailTextContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FE8225BA14C00A348EF /* QGTopicDetailTextContentCell.m */; };
 		D0101FEC225BA15A00A348EF /* QGTopicDetailImageContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FEB225BA15A00A348EF /* QGTopicDetailImageContentCell.m */; };
@@ -55,10 +56,7 @@
 		D080EFA9225248C2002ACDFB /* QGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFA8225248C2002ACDFB /* QGTableViewCell.m */; };
 		D080EFAC22524949002ACDFB /* QGHomeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFAB22524949002ACDFB /* QGHomeSliderCell.m */; };
 		D080EFB022524B75002ACDFB /* QGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFAF22524B75002ACDFB /* QGModel.m */; };
-		D080EFB322524C6F002ACDFB /* QGHomeSlierModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFB222524C6F002ACDFB /* QGHomeSlierModel.m */; };
 		D080EFB622524C8A002ACDFB /* QGHomeCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFB522524C8A002ACDFB /* QGHomeCategoryCell.m */; };
-		D080EFBC22524E48002ACDFB /* QGHomeCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFBB22524E48002ACDFB /* QGHomeCategoryModel.m */; };
-		D080EFBF22524E72002ACDFB /* QGHomeTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFBE22524E72002ACDFB /* QGHomeTopicModel.m */; };
 		D080EFC222524EBA002ACDFB /* QGHomeTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFC122524EBA002ACDFB /* QGHomeTopicCell.m */; };
 		D0D7DBF322564CD500C78B8A /* JHHorizontalPageFlowlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D7DBF222564CD500C78B8A /* JHHorizontalPageFlowlayout.m */; };
 		D0D7DC5422571FB300C78B8A /* DeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D7DC5322571FB300C78B8A /* DeviceHelper.m */; };
@@ -81,6 +79,14 @@
 		340FF9FA225B23E50095C6A8 /* QGRequestTool+QGRequestBaseTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QGRequestTool+QGRequestBaseTool.m"; sourceTree = "<group>"; };
 		340FF9FC225B25070095C6A8 /* QGResponeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGResponeModel.h; sourceTree = "<group>"; };
 		340FF9FD225B25070095C6A8 /* QGResponeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGResponeModel.m; sourceTree = "<group>"; };
+		3418C096225C6FB100525A9C /* QGTopicDetailTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailTitleCell.h; sourceTree = "<group>"; };
+		3418C097225C6FB100525A9C /* QGTopicDetailTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailTitleCell.m; sourceTree = "<group>"; };
+		3418C099225C70E400525A9C /* QGTopicCategoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicCategoryView.h; sourceTree = "<group>"; };
+		3418C09A225C70E400525A9C /* QGTopicCategoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicCategoryView.m; sourceTree = "<group>"; };
+		3418C09F225C87A600525A9C /* QGAllHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAllHomeModel.h; sourceTree = "<group>"; };
+		3418C0A0225C87A600525A9C /* QGAllHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAllHomeModel.m; sourceTree = "<group>"; };
+		3418C0A2225C88D800525A9C /* QGAllTopicDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAllTopicDetailModel.h; sourceTree = "<group>"; };
+		3418C0A3225C88D800525A9C /* QGAllTopicDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAllTopicDetailModel.m; sourceTree = "<group>"; };
 		8467D65BEE33BF7C6DD24E68 /* libPods-QGProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QGProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A142FA552444A347E7DB7957 /* Pods-QGProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QGProject/Pods-QGProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D0101FA5225779E200A348EF /* QGPicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGPicModel.h; sourceTree = "<group>"; };
@@ -112,14 +118,8 @@
 		D0101FCF22589F0E00A348EF /* ZZQAvatarPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZQAvatarPicker.h; sourceTree = "<group>"; };
 		D0101FD5225B915900A348EF /* QGTopicDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailVC.h; sourceTree = "<group>"; };
 		D0101FD6225B915900A348EF /* QGTopicDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailVC.m; sourceTree = "<group>"; };
-		D0101FD8225B928A00A348EF /* QGTopicDetailTextContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailTextContentModel.h; sourceTree = "<group>"; };
-		D0101FD9225B928B00A348EF /* QGTopicDetailTextContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailTextContentModel.m; sourceTree = "<group>"; };
-		D0101FDB225B929F00A348EF /* QGTopicDetailImageContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailImageContentModel.h; sourceTree = "<group>"; };
-		D0101FDC225B929F00A348EF /* QGTopicDetailImageContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailImageContentModel.m; sourceTree = "<group>"; };
 		D0101FDE225B92E700A348EF /* QGTopicDetailCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailCommentModel.h; sourceTree = "<group>"; };
 		D0101FDF225B92E700A348EF /* QGTopicDetailCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailCommentModel.m; sourceTree = "<group>"; };
-		D0101FE1225B94C600A348EF /* QGTopicDetailContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailContentModel.h; sourceTree = "<group>"; };
-		D0101FE2225B94C600A348EF /* QGTopicDetailContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailContentModel.m; sourceTree = "<group>"; };
 		D0101FE4225B9EA000A348EF /* QGTopicDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailModel.h; sourceTree = "<group>"; };
 		D0101FE5225B9EA000A348EF /* QGTopicDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailModel.m; sourceTree = "<group>"; };
 		D0101FE7225BA14C00A348EF /* QGTopicDetailTextContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailTextContentCell.h; sourceTree = "<group>"; };
@@ -164,14 +164,8 @@
 		D080EFAB22524949002ACDFB /* QGHomeSliderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeSliderCell.m; sourceTree = "<group>"; };
 		D080EFAE22524B75002ACDFB /* QGModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGModel.h; sourceTree = "<group>"; };
 		D080EFAF22524B75002ACDFB /* QGModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGModel.m; sourceTree = "<group>"; };
-		D080EFB122524C6F002ACDFB /* QGHomeSlierModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeSlierModel.h; sourceTree = "<group>"; };
-		D080EFB222524C6F002ACDFB /* QGHomeSlierModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeSlierModel.m; sourceTree = "<group>"; };
 		D080EFB422524C8A002ACDFB /* QGHomeCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeCategoryCell.h; sourceTree = "<group>"; };
 		D080EFB522524C8A002ACDFB /* QGHomeCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeCategoryCell.m; sourceTree = "<group>"; };
-		D080EFBA22524E48002ACDFB /* QGHomeCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeCategoryModel.h; sourceTree = "<group>"; };
-		D080EFBB22524E48002ACDFB /* QGHomeCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeCategoryModel.m; sourceTree = "<group>"; };
-		D080EFBD22524E72002ACDFB /* QGHomeTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeTopicModel.h; sourceTree = "<group>"; };
-		D080EFBE22524E72002ACDFB /* QGHomeTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeTopicModel.m; sourceTree = "<group>"; };
 		D080EFC022524EBA002ACDFB /* QGHomeTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeTopicCell.h; sourceTree = "<group>"; };
 		D080EFC122524EBA002ACDFB /* QGHomeTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeTopicCell.m; sourceTree = "<group>"; };
 		D080EFC322525118002ACDFB /* QGAllHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAllHeader.pch; sourceTree = "<group>"; };
@@ -438,22 +432,14 @@
 		D080EF4322508E4F002ACDFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D080EFB122524C6F002ACDFB /* QGHomeSlierModel.h */,
-				D080EFB222524C6F002ACDFB /* QGHomeSlierModel.m */,
-				D080EFBA22524E48002ACDFB /* QGHomeCategoryModel.h */,
-				D080EFBB22524E48002ACDFB /* QGHomeCategoryModel.m */,
-				D080EFBD22524E72002ACDFB /* QGHomeTopicModel.h */,
-				D080EFBE22524E72002ACDFB /* QGHomeTopicModel.m */,
+				3418C09F225C87A600525A9C /* QGAllHomeModel.h */,
+				3418C0A0225C87A600525A9C /* QGAllHomeModel.m */,
 				D080EFC522526A42002ACDFB /* QGHomeModel.h */,
 				D080EFC622526A42002ACDFB /* QGHomeModel.m */,
+				3418C0A2225C88D800525A9C /* QGAllTopicDetailModel.h */,
+				3418C0A3225C88D800525A9C /* QGAllTopicDetailModel.m */,
 				D0101FE4225B9EA000A348EF /* QGTopicDetailModel.h */,
 				D0101FE5225B9EA000A348EF /* QGTopicDetailModel.m */,
-				D0101FE1225B94C600A348EF /* QGTopicDetailContentModel.h */,
-				D0101FE2225B94C600A348EF /* QGTopicDetailContentModel.m */,
-				D0101FD8225B928A00A348EF /* QGTopicDetailTextContentModel.h */,
-				D0101FD9225B928B00A348EF /* QGTopicDetailTextContentModel.m */,
-				D0101FDB225B929F00A348EF /* QGTopicDetailImageContentModel.h */,
-				D0101FDC225B929F00A348EF /* QGTopicDetailImageContentModel.m */,
 				D0101FDE225B92E700A348EF /* QGTopicDetailCommentModel.h */,
 				D0101FDF225B92E700A348EF /* QGTopicDetailCommentModel.m */,
 			);
@@ -471,12 +457,16 @@
 				D0D7DBF222564CD500C78B8A /* JHHorizontalPageFlowlayout.m */,
 				D080EFC022524EBA002ACDFB /* QGHomeTopicCell.h */,
 				D080EFC122524EBA002ACDFB /* QGHomeTopicCell.m */,
+				3418C096225C6FB100525A9C /* QGTopicDetailTitleCell.h */,
+				3418C097225C6FB100525A9C /* QGTopicDetailTitleCell.m */,
 				D0101FE7225BA14C00A348EF /* QGTopicDetailTextContentCell.h */,
 				D0101FE8225BA14C00A348EF /* QGTopicDetailTextContentCell.m */,
 				D0101FEA225BA15A00A348EF /* QGTopicDetailImageContentCell.h */,
 				D0101FEB225BA15A00A348EF /* QGTopicDetailImageContentCell.m */,
 				D0101FED225BA17A00A348EF /* QGCommentCell.h */,
 				D0101FEE225BA17A00A348EF /* QGCommentCell.m */,
+				3418C099225C70E400525A9C /* QGTopicCategoryView.h */,
+				3418C09A225C70E400525A9C /* QGTopicCategoryView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -659,7 +649,7 @@
 				TargetAttributes = {
 					D080EF1222508887002ACDFB = {
 						CreatedOnToolsVersion = 10.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -743,7 +733,6 @@
 				D0101FB322579FDA00A348EF /* QGUserCenterCell1.m in Sources */,
 				340FF9ED225B15EA0095C6A8 /* CountDown.m in Sources */,
 				D062BAA8225739F20004833A /* QGPublishTopicVC.m in Sources */,
-				D080EFB322524C6F002ACDFB /* QGHomeSlierModel.m in Sources */,
 				D0101FBC22585E4400A348EF /* QGUserInfoCell2.m in Sources */,
 				D0101FF3225BA6D900A348EF /* NSString+Extension.m in Sources */,
 				D080EFB022524B75002ACDFB /* QGModel.m in Sources */,
@@ -751,14 +740,12 @@
 				D080EF3B22508DA8002ACDFB /* QGHomeVC.m in Sources */,
 				D0101FAD2257970900A348EF /* HWTextView.m in Sources */,
 				340FF9E6225AEDBA0095C6A8 /* QGLoginVC.m in Sources */,
-				D080EFBC22524E48002ACDFB /* QGHomeCategoryModel.m in Sources */,
 				D0101FD022589F0E00A348EF /* ZZQAuthorizationManager.m in Sources */,
 				D0101FE9225BA14D00A348EF /* QGTopicDetailTextContentCell.m in Sources */,
 				D0101FEC225BA15A00A348EF /* QGTopicDetailImageContentCell.m in Sources */,
 				D080EF5F22511891002ACDFB /* UIView+Extension.m in Sources */,
 				D080EFA9225248C2002ACDFB /* QGTableViewCell.m in Sources */,
 				D0101FD122589F0E00A348EF /* ZZQAvatarPicker.m in Sources */,
-				D080EFBF22524E72002ACDFB /* QGHomeTopicModel.m in Sources */,
 				D0101FEF225BA17A00A348EF /* QGCommentCell.m in Sources */,
 				D080EFC222524EBA002ACDFB /* QGHomeTopicCell.m in Sources */,
 				D080EF1822508887002ACDFB /* QGAppDelegate.m in Sources */,
@@ -770,6 +757,7 @@
 				340FF9FB225B23E50095C6A8 /* QGRequestTool+QGRequestBaseTool.m in Sources */,
 				340FF9F5225B1CE70095C6A8 /* QGRequestTool.m in Sources */,
 				D0101FB022579F1B00A348EF /* QGUserModel.m in Sources */,
+				3418C09B225C70E400525A9C /* QGTopicCategoryView.m in Sources */,
 				D0101FC22258764400A348EF /* QGChangeUserInfoVC.m in Sources */,
 				340FF9F1225B1A450095C6A8 /* QGSubmitButton.m in Sources */,
 				D080EF3522508A01002ACDFB /* QGNavigationController.m in Sources */,
@@ -779,18 +767,18 @@
 				D0101FA7225779E200A348EF /* QGPicModel.m in Sources */,
 				D042711122526FE300FB1A26 /* QGHomeModel.m in Sources */,
 				D080EFAC22524949002ACDFB /* QGHomeSliderCell.m in Sources */,
+				3418C098225C6FB100525A9C /* QGTopicDetailTitleCell.m in Sources */,
 				D0D7DBF322564CD500C78B8A /* JHHorizontalPageFlowlayout.m in Sources */,
 				D06585D122574327009BCECA /* QGControllerTool.m in Sources */,
-				D0101FDA225B928B00A348EF /* QGTopicDetailTextContentModel.m in Sources */,
 				D0101FBF22585F6D00A348EF /* QGUserinfoVC.m in Sources */,
 				D0101FD222589F0E00A348EF /* ZZQResourceSheetView.m in Sources */,
+				3418C0A4225C88D800525A9C /* QGAllTopicDetailModel.m in Sources */,
 				D06585D4225760C6009BCECA /* QGPicCollectionViewCell.m in Sources */,
 				D0101FC6225876B300A348EF /* QGUserManager.m in Sources */,
-				D0101FE3225B94C600A348EF /* QGTopicDetailContentModel.m in Sources */,
 				340FF9E2225AEB050095C6A8 /* LMHVerticalButton.m in Sources */,
 				D080EF32225089BD002ACDFB /* QGTabbarController.m in Sources */,
 				D080EFB622524C8A002ACDFB /* QGHomeCategoryCell.m in Sources */,
-				D0101FDD225B929F00A348EF /* QGTopicDetailImageContentModel.m in Sources */,
+				3418C0A1225C87A600525A9C /* QGAllHomeModel.m in Sources */,
 				D080EF5122508ED0002ACDFB /* QGMineVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -919,8 +907,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7UAMLXR22D;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = G74HU5SJSU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QGProject/主要/Other/QGAllHeader.pch";
 				INFOPLIST_FILE = QGProject/Info.plist;
@@ -928,7 +916,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.QG.xx.QGProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = iOS_Dev_Provisioning_Profile;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -939,15 +927,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7UAMLXR22D;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = G74HU5SJSU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = QGProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.QG.xx.QGProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = iOS_Dev_Provisioning_Profile;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

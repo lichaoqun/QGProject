@@ -7,7 +7,7 @@
 //
 
 #import "QGHomeTopicCell.h"
-
+#import "QGTopicCategoryView.h"
 
 @interface QGHomeTopicCell ()
 
@@ -29,11 +29,8 @@
 /** 发布者的昵称 */
 @property(nonatomic, weak)UILabel *author_nameLabel;
 
-/** 标签的 icon */
-@property(nonatomic, weak)UIImageView *tagImageView;
-
-/** 分类的名称 */
-@property(nonatomic, weak)UILabel *categoryLabel;
+/** 分类的 view */
+@property (nonatomic, weak) QGTopicCategoryView *categoryView;
 
 @end
 
@@ -55,7 +52,7 @@
         }];
         
         // - 计算 cell 行高
-        CGFloat hei = [topicModel.content_summary boundingRectWithSize:CGSizeMake(self.width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.topicDetailTitleLabel.font} context:nil].size.height;
+        CGFloat hei = [topicModel.topicDesc boundingRectWithSize:CGSizeMake(self.width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.topicDetailTitleLabel.font} context:nil].size.height;
         CGFloat maxH = 50;
         originalHei += MIN(hei, maxH);
         [self.topicDetailTitleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -63,7 +60,7 @@
         }];
     }else{
         CGFloat imgH = 70;
-        [self.topicDesImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.content_img_url]];
+        [self.topicDesImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.topicImageUrl]];
         [self.topicDesImageView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(imgH, imgH));
             make.right.equalTo(self.contentView).offset(-10);
@@ -80,22 +77,14 @@
     topicModel.cellHeight = originalHei;
 
     // - 标题和内容
-    self.topicTitleLabel.text = topicModel.content_title;
-    self.topicDetailTitleLabel.text = topicModel.content_summary;
-    self.publishTimeLabel.text = [NSString formatTimeWithInterval:topicModel.content_publish_time];
+    self.topicTitleLabel.text = topicModel.topicTitle.title;
+    self.topicDetailTitleLabel.text = topicModel.topicDesc;
+    self.publishTimeLabel.text = [NSString formatTimeWithInterval:topicModel.topicTitle.createTime];
     
     // - 发帖人信息
-    [self.author_iconImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.content_author_icon_url]];
-    self.author_nameLabel.text = topicModel.content_author_name;
-    self.categoryLabel.text = topicModel.content_publish_cate;
-    
-    // - 分类的信息的背景宽度
-    int width = MIN([topicModel.content_publish_cate sizeWithAttributes:@{NSFontAttributeName : self.categoryLabel.font}].width + 20, 100);
-    width = MAX(width, 40);
-    [self.tagImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(width);
-    }];
-    
+    [self.author_iconImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.user.avatar]];
+    self.author_nameLabel.text = topicModel.user.nickName;
+    self.categoryView.category = topicModel.topicTitle.category;
 }
 
 // - MARK: <-- 懒加载 -->
@@ -208,37 +197,21 @@
     return _author_nameLabel;
 }
 
-/** 标签的 icon */
-- (UIImageView *)tagImageView{
-    if (!_tagImageView) {
-        UIImageView *imgView = [[UIImageView alloc]init];
-        [self.contentView addSubview:imgView];
-        _tagImageView = imgView;
-        imgView.image = [UIImage imageNamed:@"category_bg"];
-        [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+/** 分类标签 */
+- (QGTopicCategoryView *)categoryView{
+    if(!_categoryView){
+        QGTopicCategoryView *categoryView = [[QGTopicCategoryView alloc] init];
+        [self.contentView addSubview:categoryView];
+        _categoryView = categoryView;
+        
+        [categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(self.author_iconImageView);
             make.width.mas_equalTo(90);
             make.left.equalTo(self.author_nameLabel.mas_right).offset(10);
             make.bottom.equalTo(self.author_nameLabel);
         }];
     }
-    return _tagImageView;
+    return _categoryView;
 }
 
-/** 分类的名称 */
-- (UILabel *)categoryLabel{
-    if (!_categoryLabel) {
-        UILabel *label = [[UILabel alloc] init];
-        label.textColor = [UIColor colorWithHexString:@"FFFFFF"];
-        label.font = [UIFont systemFontOfSize:10];
-        label.textAlignment = NSTextAlignmentCenter;
-        [self.tagImageView addSubview:label];
-        _categoryLabel = label;
-        [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(UIEdgeInsetsMake(5, 10, 5, 5));
-        }];
-    }
-    return _categoryLabel;
-
-}
 @end

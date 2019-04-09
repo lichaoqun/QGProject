@@ -10,6 +10,10 @@
 #import "QGRequestTool+QGRequestBaseTool.h"
 
 @implementation QGRequestTool
+/** 首页数据 */
++(NSURLSessionTask *)getHomeDataComplete:(QGRequestComplete)complete{
+    return [self GET:@"http://www.dev.qi-e.tv/app_api/v13/index?aid=ios&carrier=%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8&cid=197&client_sys=ios&device_id=a8e12b615ff2723beaf5404933e29aa1&device_token=a8e12b615ff2723beaf5404933e29aa1&manufacturer=Apple&model=iPhone10,1&os_version=11.4.1&time=1554795480&vercode=6.1.0.0&version=6.1.0.0&wifi=1&auth=83bbceee18db3530a0af979ed011d82b" parameters:nil complete:complete];
+}
 
 /** 登录 */
 +(NSURLSessionTask *)loginWithPhoneNum:(NSString *)phoneNum verificationCode:(NSString *)verificationCode complete:(QGRequestComplete)complete{

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QGTopicDetailTextContentModel.h"
+#import "QGAllTopicDetailModel.h"
 
 @interface QGTopicDetailTextContentCell : UITableViewCell
 

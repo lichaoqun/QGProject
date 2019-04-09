@@ -54,7 +54,7 @@
         [headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(wh, wh));
             make.centerY.equalTo(self.contentView);
-            make.left.equalTo(self.contentView).offset(cellLRPadding);
+            make.left.equalTo(self.contentView).offset(kCellLRPadding);
         }];
     }
     return _headerImageView;

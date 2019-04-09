@@ -7,6 +7,7 @@
 //
 
 #import "QGModel.h"
+#import "QGAllHomeModel.h"
 
 /** 数据类型 轮播图, 分类, 帖子 */
 typedef NS_ENUM(NSInteger, QGHomeDataType) {
@@ -18,12 +19,12 @@ typedef NS_ENUM(NSInteger, QGHomeDataType) {
 @interface QGHomeModel : QGModel
 
 /** 数据类型 */
-@property(nonatomic, assign)QGHomeDataType data_type;
+@property(nonatomic, assign)QGHomeDataType dataType;
 
 /** 数据标题 */
-@property(nonatomic, copy)NSString *data_title;
+@property(nonatomic, copy)NSString *dataTitle;
 
 /** 数据的内容 */
-@property(nonatomic, strong)NSArray *data_content;
+@property(nonatomic, strong)NSArray <QGHomeBaseModel *>*dataContent;
 
 @end

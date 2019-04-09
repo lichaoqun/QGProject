@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QGTopicDetailContentModel.h"
+#import "QGAllTopicDetailModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,11 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** content 数组 */
 @property(nonatomic, strong)NSArray <QGTopicDetailContentModel *>*content;
 
-/** 发帖的时间戳 */
-@property(nonatomic, assign)NSTimeInterval creatTime;
+/** 标题的Model */
+@property (nonatomic, strong) QGTopicDetailTitleContentModel *titleModel;
 
-/** 帖子的标题 */
-@property(nonatomic, copy)NSString *title;
+/** 发布人的信息 */
+@property(nonatomic, strong)QGUserModel *publishUser;
 
 @end
 

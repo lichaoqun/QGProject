@@ -7,9 +7,11 @@
 //
 
 #import "QGTableViewCell.h"
-#import "QGHomeCategoryModel.h"
+#import "QGAllHomeModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+UIKIT_EXTERN int const itemCountPerRow;
 
 @interface QGHomeCategoryCell : QGTableViewCell
 

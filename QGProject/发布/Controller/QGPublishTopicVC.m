@@ -27,7 +27,7 @@ static NSString *picCollectionViewCellID = @"picCollectionViewCellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.categoryModel.cate_name;
+    self.title = self.categoryModel.cateName;
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupUI];
     self.fd_prefersNavigationBarHidden = YES;

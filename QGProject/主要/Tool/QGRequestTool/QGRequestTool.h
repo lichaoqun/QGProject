@@ -12,6 +12,9 @@
 @interface QGRequestTool : NSObject
 
 /** 登录 */
++(NSURLSessionTask *)getHomeDataComplete:(QGRequestComplete)complete;
+
+/** 登录 */
 +(NSURLSessionTask *)loginWithPhoneNum:(NSString *)phoneNum verificationCode:(NSString *)verificationCode complete:(QGRequestComplete)complete;
 
 @end

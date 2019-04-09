@@ -7,7 +7,7 @@
 //
 
 #import "QGBaseVC.h"
-#import "QGHomeCategoryModel.h"
+#import "QGAllHomeModel.h"
 
 @interface QGPublishTopicVC : QGBaseVC
 

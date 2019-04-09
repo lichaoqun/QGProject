@@ -50,7 +50,7 @@
     
     [avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(avatarWH, avatarWH));
-        make.left.equalTo(self.contentView).offset(cellLRPadding);
+        make.left.equalTo(self.contentView).offset(kCellLRPadding);
         make.top.equalTo(self.contentView).offset(10);
     }];
 
@@ -90,7 +90,7 @@
     
     [commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(nickNameLabel);
-        make.right.equalTo(self.contentView).offset(-cellLRPadding);
+        make.right.equalTo(self.contentView).offset(-kCellLRPadding);
         make.top.equalTo(timeLabel.mas_bottom).offset(10);
     }];
 }
