@@ -13,7 +13,7 @@
 /** get 请求 */
 + (NSURLSessionTask *)GET:(NSString *)URL
                parameters:(id)parameters
-                 complete:(QGRequestComplete)complete{
+                 complete:(QGResponeComplete)complete{
     if ([QGUserManager shareMgr].token)  [PPNetworkHelper setValue:[QGUserManager shareMgr].token forHTTPHeaderField:@"token"];
     return [PPNetworkHelper GET:URL parameters:parameters success:^(id responseObject) {
         QGResponeModel *responeModel = [QGResponeModel yy_modelWithJSON:responseObject];
@@ -28,7 +28,7 @@
 /** post 请求 */
 + (NSURLSessionTask *)POST:(NSString *)URL
                 parameters:(id)parameters
-                  complete:(QGRequestComplete)complete{
+                  complete:(QGResponeComplete)complete{
     if ([QGUserManager shareMgr].token)  [PPNetworkHelper setValue:[QGUserManager shareMgr].token forHTTPHeaderField:@"token"];
     return [PPNetworkHelper POST:URL parameters:parameters success:^(id responseObject) {
         QGResponeModel *responeModel = [QGResponeModel yy_modelWithJSON:responseObject];
@@ -49,7 +49,7 @@
                                         imageScale:(CGFloat)imageScale
                                          imageType:(NSString *)imageType
                                           progress:(PPHttpProgress)progress
-                                          complete:(QGRequestComplete)complete{
+                                          complete:(QGResponeComplete)complete{
     if ([QGUserManager shareMgr].token)  [PPNetworkHelper setValue:[QGUserManager shareMgr].token forHTTPHeaderField:@"token"];
     return [PPNetworkHelper uploadImagesWithURL:URL parameters:parameters name:name images:images fileNames:fileNames imageScale:(CGFloat)imageScale imageType:imageType progress:progress success:^(id responseObject) {
         QGResponeModel *responeModel = [QGResponeModel yy_modelWithJSON:responseObject];

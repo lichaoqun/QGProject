@@ -40,7 +40,7 @@
     self.textContentLable = textContentLable;
     
     [textContentLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.equalTo(self.contentView);
+        make.edges.mas_equalTo(UIEdgeInsetsMake(5, kCellLRPadding, 5, kCellLRPadding));
     }];
 }
 

@@ -61,7 +61,7 @@
         make.height.mas_equalTo(20);
         make.width.mas_equalTo(90);
         make.left.equalTo(self.contentView).offset(kCellLRPadding);
-        make.top.equalTo(topicTitleLabel).offset(10);
+        make.top.equalTo(topicTitleLabel.mas_bottom).offset(10);
     }];
     
     /**  分类的 lable */
@@ -75,7 +75,6 @@
         make.left.equalTo(categoryView.mas_right).offset(10);
         make.bottom.equalTo(categoryView);
     }];
-
 }
 
 // - MARK: <-- 设置数据 -->

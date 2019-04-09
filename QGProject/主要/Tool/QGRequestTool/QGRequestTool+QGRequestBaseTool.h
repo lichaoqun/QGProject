@@ -14,11 +14,11 @@
 /** get 请求 */
 + (NSURLSessionTask *)GET:(NSString *)URL
                parameters:(id)parameters
-                   complete:(QGRequestComplete)complete;
+                   complete:(QGResponeComplete)complete;
 /** post 请求 */
 + (NSURLSessionTask *)POST:(NSString *)URL
                 parameters:(id)parameters
-                  complete:(QGRequestComplete)complete;
+                  complete:(QGResponeComplete)complete;
 
 /** 上传图片 */
 + (NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
@@ -29,6 +29,6 @@
                                         imageScale:(CGFloat)imageScale
                                          imageType:(NSString *)imageType
                                           progress:(PPHttpProgress)progress
-                                          complete:(QGRequestComplete)complete;
+                                          complete:(QGResponeComplete)complete;
 
 @end

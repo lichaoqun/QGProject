@@ -25,6 +25,6 @@ typedef NS_ENUM(NSInteger, QGHomeDataType) {
 @property(nonatomic, copy)NSString *dataTitle;
 
 /** 数据的内容 */
-@property(nonatomic, strong)NSArray <QGHomeBaseModel *>*dataContent;
+@property(nonatomic, strong)NSArray *dataContent;
 
 @end

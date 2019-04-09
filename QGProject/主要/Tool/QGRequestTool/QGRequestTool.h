@@ -11,10 +11,13 @@
 
 @interface QGRequestTool : NSObject
 
-/** 登录 */
-+(NSURLSessionTask *)getHomeDataComplete:(QGRequestComplete)complete;
+/** 首页数据 */
++(NSURLSessionTask *)getHomeDataComplete:(QGResponeComplete)complete;
+
+/** 获取帖子的详细信息 */
++(NSURLSession *)getTopicDetailWithTopicID:(NSString *)topicID complete:(QGResponeComplete)complete;
 
 /** 登录 */
-+(NSURLSessionTask *)loginWithPhoneNum:(NSString *)phoneNum verificationCode:(NSString *)verificationCode complete:(QGRequestComplete)complete;
++(NSURLSessionTask *)loginWithPhoneNum:(NSString *)phoneNum verificationCode:(NSString *)verificationCode complete:(QGResponeComplete)complete;
 
 @end

@@ -11,7 +11,7 @@
 @class QGResponeModel;
 
 /** 请求完成的Block */
-typedef void(^QGRequestComplete)(QGResponeModel *responeModel);
+typedef void(^QGResponeComplete)(QGResponeModel *responeModel);
 
 @interface QGResponeModel : NSObject
 

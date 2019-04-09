@@ -7,6 +7,7 @@
 //
 
 #import "QGTopicDetailVC.h"
+#import "QGTopicDetailModel.h"
 #import "QGTopicDetailTitleCell.h"
 #import "QGTopicDetailTextContentCell.h"
 #import "QGTopicDetailImageContentCell.h"
@@ -44,6 +45,7 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:tableView];
     self.tableView = tableView;
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -61,7 +63,40 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
 
 /** 初始化数据 */
 -(void)setupData{
-    
+    [QGRequestTool getTopicDetailWithTopicID:nil complete:^(QGResponeModel *responeModel) {
+        if (responeModel.code == 0) {
+            QGTopicDetailModel *detailModel = [QGTopicDetailModel yy_modelWithJSON:responeModel.data];
+            
+            // - 标题
+            QGTopicDetailTitleContentModel *titleModel = detailModel.topicTitle;
+            NSArray *titleModelArray = [NSArray arrayWithObject:titleModel];
+            [self.modelArray addObject:titleModelArray];
+            
+            // - 内容
+            NSMutableArray *contentArray = [NSMutableArray array];
+            for (NSDictionary *dic in detailModel.content) {
+                QGTopicDetailContentModel *contentModel = [QGTopicDetailContentModel yy_modelWithJSON:dic];
+                switch (contentModel.type) {
+                    case QGTopicModelTypeText:{
+                        QGTopicDetailTextContentModel *model = [QGTopicDetailTextContentModel yy_modelWithJSON:dic];
+                        [contentArray addObject:model];
+                        break;
+                    }
+                    case QGTopicModelTypeImage:{
+                        QGTopicDetailImageContentModel *model = [QGTopicDetailImageContentModel yy_modelWithJSON:dic];
+                        [contentArray addObject:model];
+                        break;
+                    }
+                    default:
+                        break;
+                }
+            }
+            [self.modelArray addObject:contentArray];
+            [self.tableView reloadData];
+        }else{
+            [YJProgressHUD showMessage:responeModel.msg inView:self.view];
+        }
+    }];
 }
 
 // - MARK: <-- 代理方法 -->
@@ -100,6 +135,7 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
     NSArray *models = self.modelArray[indexPath.section];
     QGTopicDetailContentModel *model = models[indexPath.row];
     return model.cellHeight;
