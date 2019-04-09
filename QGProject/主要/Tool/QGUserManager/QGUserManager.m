@@ -24,17 +24,18 @@ static QGUserManager *userManager_;
     return userManager_;
 }
 
+/** 清空 token */
 +(void)setTokenNULL{
-    [QGUserManager shareMgr].userModel.token = nil;
+    [QGUserManager shareMgr].token = nil;
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kTokenSaveKey];
 }
 
 // - MARK: <-- get 方法 -->
 /** token */
 -(NSString *)token{
-    if (userManager_.userModel.token) return userManager_.userModel.token;
-    return [[NSUserDefaults standardUserDefaults]objectForKey:kTokenSaveKey];
-
+    if (_token) return _token;
+    _token = [[NSUserDefaults standardUserDefaults]objectForKey:kTokenSaveKey];
+    return _token;
 }
 
 // - MARK: <-- 登录页面 -->

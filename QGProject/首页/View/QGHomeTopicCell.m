@@ -92,8 +92,8 @@
 - (UILabel *)topicTitleLabel{
     if (!_topicTitleLabel) {
         UILabel *label = [[UILabel alloc] init];
-        label.textColor = [UIColor colorWithHexString:@"000000"];
-        label.font = [UIFont boldSystemFontOfSize:14];
+        label.textColor = colorGray000000();
+        label.font = fontBold14();
         label.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:label];
         _topicTitleLabel = label;
@@ -109,9 +109,9 @@
 - (UILabel *)publishTimeLabel{
     if (!_publishTimeLabel) {
         UILabel *label = [[UILabel alloc] init];
-        label.textColor = [UIColor colorWithHexString:@"666666"];
+        label.textColor = colorGray666666();
         label.numberOfLines = 0;
-        label.font = [UIFont systemFontOfSize:12];
+        label.font = fontNormal12();
         label.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:label];
         _publishTimeLabel = label;
@@ -129,9 +129,9 @@
 - (UILabel *)topicDetailTitleLabel{
     if (!_topicDetailTitleLabel) {
         UILabel *label = [[UILabel alloc] init];
-        label.textColor = [UIColor colorWithHexString:@"666666"];
+        label.textColor = colorGray666666();
         label.numberOfLines = 0;
-        label.font = [UIFont systemFontOfSize:12];
+        label.font = fontNormal12();
         label.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:label];
         _topicDetailTitleLabel = label;
@@ -183,8 +183,8 @@
 - (UILabel *)author_nameLabel{
     if (!_author_nameLabel) {
         UILabel *label = [[UILabel alloc] init];
-        label.textColor = [UIColor colorWithHexString:@"666666"];
-        label.font = [UIFont systemFontOfSize:12];
+        label.textColor = colorGray666666();
+        label.font = fontNormal12();
         label.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:label];
         _author_nameLabel = label;

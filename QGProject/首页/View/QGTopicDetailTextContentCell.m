@@ -30,8 +30,8 @@
 // - MARK: <-- 设置 UI -->
 -(void)setupUI{
     UILabel *textContentLable=[[UILabel alloc]init];
-    textContentLable.font=[UIFont systemFontOfSize:16];
-    textContentLable.textColor=[UIColor colorWithHexString:@"333333"];
+    textContentLable.font = fontNormal16();
+    textContentLable.textColor = colorGray333333();
     textContentLable.numberOfLines = 0;
     textContentLable.textAlignment=NSTextAlignmentLeft;
     textContentLable.lineBreakMode = NSLineBreakByWordWrapping;

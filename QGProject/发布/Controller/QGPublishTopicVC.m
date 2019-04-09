@@ -28,7 +28,7 @@ static NSString *picCollectionViewCellID = @"picCollectionViewCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.categoryModel.cateName;
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = colorGrayFFFFFF();
     [self setupUI];
     self.fd_prefersNavigationBarHidden = YES;
 }
@@ -59,8 +59,8 @@ static NSString *picCollectionViewCellID = @"picCollectionViewCellID";
     // - 标题的输入框
     HWTextView *titleTV = [[HWTextView alloc]initWithFrame:CGRectZero];
     titleTV.placeholder = @"请输入标题~";
-    titleTV.font = [UIFont systemFontOfSize:18];
-    titleTV.backgroundColor = [UIColor colorWithHexString:@"F5F5F5"];
+    titleTV.font = fontNormal18();
+    titleTV.backgroundColor = colorGrayF5F5F5();
     [self.view addSubview:titleTV];
     titleTV.delegate = self;
     titleTV.returnKeyType = UIReturnKeyDone;
@@ -73,8 +73,8 @@ static NSString *picCollectionViewCellID = @"picCollectionViewCellID";
     // - 内容的输入框
     HWTextView *summerTV = [[HWTextView alloc]initWithFrame:CGRectZero];
     summerTV.placeholder = @"请输入内容~";
-    summerTV.font = [UIFont systemFontOfSize:18];
-    summerTV.backgroundColor = [UIColor colorWithHexString:@"F5F5F5"];
+    summerTV.font = fontNormal18();
+    summerTV.backgroundColor = colorGrayF5F5F5();
     summerTV.returnKeyType = UIReturnKeyDone;
     [self.view addSubview:summerTV];
     summerTV.delegate = self;
@@ -87,8 +87,8 @@ static NSString *picCollectionViewCellID = @"picCollectionViewCellID";
     // - 发布按钮
     UIButton *publishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [publishBtn setTitle:@"发布" forState:UIControlStateNormal];
-    [publishBtn setTitleColor:[UIColor colorWithHexString:@"CD3700"] forState:UIControlStateNormal];
-    [publishBtn.titleLabel setFont:[UIFont systemFontOfSize:18]];
+    [publishBtn setTitleColor:colorRedCD3700() forState:UIControlStateNormal];
+    [publishBtn.titleLabel setFont:fontNormal18()];
     [self.view addSubview:publishBtn];
     [publishBtn addTarget:self action:@selector(onPublishButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [publishBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -100,8 +100,8 @@ static NSString *picCollectionViewCellID = @"picCollectionViewCellID";
     // - 取消按钮
     UIButton *cancel = [UIButton buttonWithType:UIButtonTypeCustom];
     [cancel setTitle:@"取消" forState:UIControlStateNormal];
-    [cancel setTitleColor:[UIColor colorWithHexString:@"999999"] forState:UIControlStateNormal];
-    [cancel.titleLabel setFont:[UIFont systemFontOfSize:18]];
+    [cancel setTitleColor:colorGray999999() forState:UIControlStateNormal];
+    [cancel.titleLabel setFont:fontNormal18()];
     [self.view addSubview:cancel];
     [cancel addTarget:self action:@selector(onCancelButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [cancel mas_makeConstraints:^(MASConstraintMaker *make) {

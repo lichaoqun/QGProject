@@ -25,7 +25,4 @@
 /** 认证机构名称 */
 @property (nonatomic, copy) NSString *orgName;
 
-/** 用户的token */
-@property(nonatomic, copy)NSString *token;
-
 @end

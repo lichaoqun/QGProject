@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy)NSString *topicID;
 
 /** content 数组 */
-@property(nonatomic, strong)NSArray <QGTopicDetailContentModel *>*content;
+@property(nonatomic, strong)NSArray *content;
 
 /** 标题的Model */
 @property (nonatomic, strong) QGTopicDetailTitleContentModel *topicTitle;

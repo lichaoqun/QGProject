@@ -36,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = colorGrayFFFFFF();
     self.title = @"登录";
     [self setupUI];
 }
@@ -59,8 +59,8 @@
     phoneNumTF.borderStyle = UITextBorderStyleRoundedRect;
     phoneNumTF.returnKeyType = UIReturnKeyDone;
     phoneNumTF.keyboardType = UIKeyboardTypePhonePad;
-    phoneNumTF.textColor = [UIColor redColor];
-    phoneNumTF.font = [UIFont systemFontOfSize:14];
+    phoneNumTF.textColor = colorGray333333();
+    phoneNumTF.font = fontNormal14();
     
     [phoneNumTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(40);
@@ -76,8 +76,8 @@
     verificationNumTF.borderStyle = UITextBorderStyleRoundedRect;
     verificationNumTF.returnKeyType = UIReturnKeyDone;
     verificationNumTF.keyboardType = UIKeyboardTypePhonePad;
-    verificationNumTF.textColor = [UIColor redColor];
-    verificationNumTF.font = [UIFont systemFontOfSize:14];
+    verificationNumTF.textColor = colorGray333333();
+    verificationNumTF.font = fontNormal14();
     
     [verificationNumTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(phoneNumTF);
@@ -88,9 +88,9 @@
     // - 获取验证码输入框
     UIButton *sendVerificationBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [sendVerificationBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
-    sendVerificationBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-    [sendVerificationBtn setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
-    [sendVerificationBtn setTitleColor:[UIColor colorWithHexString:@"666666"] forState:UIControlStateDisabled];
+    sendVerificationBtn.titleLabel.font = fontNormal12();
+    [sendVerificationBtn setTitleColor:colorGray333333() forState:UIControlStateNormal];
+    [sendVerificationBtn setTitleColor:colorGray666666() forState:UIControlStateDisabled];
     sendVerificationBtn.frame = CGRectMake(0, 0, viewH *2, viewH);
     verificationNumTF.rightView = sendVerificationBtn;
     verificationNumTF.rightViewMode = UITextFieldViewModeAlways;
@@ -142,6 +142,7 @@
         if (responeModel.code == 0) {
             QGUserModel *model = [QGUserModel yy_modelWithJSON:responeModel.data];
             [QGUserManager shareMgr].userModel = model;
+            [QGUserManager shareMgr].token = responeModel.data[@"token"];
             !self.loginComplete ? : self.loginComplete(model);
             [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         }else{

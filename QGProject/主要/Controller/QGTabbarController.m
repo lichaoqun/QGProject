@@ -31,8 +31,8 @@
 
 // - MARK: <-- 设置通用的tabbar的文字颜色 -->
 -(void)setupTabbarItemAttr{
-    NSDictionary * normalAttrs = @{NSForegroundColorAttributeName : [UIColor blackColor]};
-    NSDictionary *selectAttrs = @{NSForegroundColorAttributeName : [UIColor orangeColor]};
+    NSDictionary * normalAttrs = @{NSForegroundColorAttributeName : colorGray000000()};
+    NSDictionary *selectAttrs = @{NSForegroundColorAttributeName : colorRedCD3700()};
     UITabBarItem * tabarItem = [UITabBarItem appearance];
     [tabarItem setTitleTextAttributes:selectAttrs forState:UIControlStateSelected];
     [tabarItem setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];

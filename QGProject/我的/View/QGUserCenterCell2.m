@@ -24,8 +24,8 @@
     if(!_mainTitleLabel){
         UILabel *mainTitleLabel = [[UILabel alloc] init];
         mainTitleLabel.textAlignment = NSTextAlignmentLeft;
-        mainTitleLabel.font = [UIFont systemFontOfSize:16];
-        mainTitleLabel.textColor = [UIColor colorWithHexString:@"000000"];
+        mainTitleLabel.font = fontNormal16();
+        mainTitleLabel.textColor = colorGray000000();
         [self.contentView addSubview:mainTitleLabel];
         _mainTitleLabel = mainTitleLabel;
         

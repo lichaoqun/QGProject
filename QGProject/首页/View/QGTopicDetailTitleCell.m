@@ -39,8 +39,8 @@
     
     // - 帖子的 label
     UILabel *topicTitleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-    topicTitleLabel.textColor = [UIColor colorWithHexString:@"333333"];
-    topicTitleLabel.font = [UIFont boldSystemFontOfSize:16];
+    topicTitleLabel.textColor = colorGray333333();
+    topicTitleLabel.font = fontBold16();
     topicTitleLabel.numberOfLines = 2;
     [self.contentView addSubview:topicTitleLabel];
     self.topicTitleLabel = topicTitleLabel;
@@ -66,8 +66,8 @@
     
     /**  分类的 lable */
     UILabel *timeLabel = [[UILabel alloc]init];
-    timeLabel.textColor = [UIColor colorWithHexString:@"999999"];
-    timeLabel.font = [UIFont systemFontOfSize:12];
+    timeLabel.textColor = colorGray999999();
+    timeLabel.font = fontNormal12();
     [self.contentView addSubview:timeLabel];
     self.timeLabel = timeLabel;
     

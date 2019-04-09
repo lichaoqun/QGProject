@@ -34,8 +34,8 @@
         _mainTitleLabel = mainTitleLabel;
         mainTitleLabel.text = @"头像";
         mainTitleLabel.textAlignment = NSTextAlignmentLeft;
-        mainTitleLabel.font = [UIFont systemFontOfSize:16];
-        mainTitleLabel.textColor = [UIColor colorWithHexString:@"000000"];
+        mainTitleLabel.font = fontNormal16();
+        mainTitleLabel.textColor = colorGray000000();
 
         [mainTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.contentView).offset(kCellLRPadding);

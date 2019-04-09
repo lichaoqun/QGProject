@@ -9,15 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "QGUserModel.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface QGUserManager : NSObject
 
 /**  用户Model */
 @property(nonatomic, strong)QGUserModel *userModel;
 
 /** 获取 token */
-@property (nonatomic, copy, readonly) NSString *token;
+@property (nonatomic, copy) NSString *token;
 
 /** 单例初始化 */
 +(instancetype)shareMgr;
@@ -26,5 +24,3 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)showLoginVCComplete:(void(^)(QGUserModel *userModel))complete;
 
 @end
-
-NS_ASSUME_NONNULL_END

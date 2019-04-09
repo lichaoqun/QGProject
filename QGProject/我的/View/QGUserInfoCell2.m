@@ -27,8 +27,8 @@
         [self.contentView addSubview:mainTitleLabel];
         _mainTitleLabel = mainTitleLabel;
         mainTitleLabel.textAlignment = NSTextAlignmentLeft;
-        mainTitleLabel.font = [UIFont systemFontOfSize:16];
-        mainTitleLabel.textColor = [UIColor colorWithHexString:@"000000"];
+        mainTitleLabel.font = fontNormal16();
+        mainTitleLabel.textColor = colorGray000000();
         
         [mainTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.contentView).offset(kCellLRPadding);
@@ -45,8 +45,8 @@
         [self.contentView addSubview:subTitleLabel];
         _subTitleLabel = subTitleLabel;
         subTitleLabel.textAlignment = NSTextAlignmentRight;
-        subTitleLabel.font = [UIFont systemFontOfSize:14];
-        subTitleLabel.textColor = [UIColor colorWithHexString:@"333333"];
+        subTitleLabel.font = fontNormal14();
+        subTitleLabel.textColor = colorGray333333();
         
         [subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.mainTitleLabel);

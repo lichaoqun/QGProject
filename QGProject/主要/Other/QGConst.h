@@ -12,7 +12,6 @@
 /** 本地存储 token 的 key */
 static CGFloat const kCellLRPadding = 18;
 
-
 /** token 过期 */
 static NSString *const kTokenPast = @"kTokenPast";
 

@@ -24,7 +24,7 @@ static NSArray *modelsArray_;
 @implementation QGPublishChooseCategoryVC
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = colorGrayFFFFFF();
     [self setupUI];
     [self animationWeiBo];
 }
@@ -89,10 +89,10 @@ static NSArray *modelsArray_;
         btn.btnModel = obj;
         
         // 5. 设置按钮的内容
-        btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        btn.titleLabel.font = fontNormal14();
         [btn sd_setImageWithURL:[NSURL URLWithString:obj.cateIconUrl] forState:UIControlStateNormal];
         [btn setTitle:obj.cateName forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setTitleColor:colorGray000000() forState:UIControlStateNormal];
         
         // 7.给按钮添加弹簧动画
         POPSpringAnimation * anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];

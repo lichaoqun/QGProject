@@ -24,11 +24,4 @@
     return @"18211159457";
 }
 
--(void)setToken:(NSString *)token{
-    _token = token;
-    if (token) {
-        [[NSUserDefaults standardUserDefaults]setObject:token forKey:kTokenSaveKey];
-        [[NSUserDefaults standardUserDefaults]synchronize];
-    }
-}
 @end

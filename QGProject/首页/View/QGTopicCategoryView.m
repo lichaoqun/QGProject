@@ -50,8 +50,8 @@
 - (UILabel *)categoryLabel{
     if (!_categoryLabel) {
         UILabel *label = [[UILabel alloc] init];
-        label.textColor = [UIColor colorWithHexString:@"FFFFFF"];
-        label.font = [UIFont systemFontOfSize:10];
+        label.textColor = colorGrayFFFFFF();
+        label.font = fontNormal9();
         label.textAlignment = NSTextAlignmentCenter;
         [self.tagImageView addSubview:label];
         _categoryLabel = label;

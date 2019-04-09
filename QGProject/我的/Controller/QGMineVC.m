@@ -25,7 +25,7 @@ static NSString * const kUserCenterCell2ID = @"kUserCenterCell2ID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = colorGrayFFFFFF();
     
     [self setupUI];
     // - token 过期的处理

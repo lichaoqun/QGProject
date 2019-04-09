@@ -65,8 +65,8 @@
     if(!_nameLabel){
         UILabel *nameLabel = [[UILabel alloc] init];
         nameLabel.textAlignment = NSTextAlignmentLeft;
-        nameLabel.font = [UIFont systemFontOfSize:14];
-        nameLabel.textColor = [UIColor colorWithHexString:@"333333"];
+        nameLabel.font = fontNormal14();
+        nameLabel.textColor = colorGray333333();
         [self.contentView addSubview:nameLabel];
         _nameLabel = nameLabel;
         

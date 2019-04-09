@@ -38,6 +38,7 @@
 		D0101FEC225BA15A00A348EF /* QGTopicDetailImageContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FEB225BA15A00A348EF /* QGTopicDetailImageContentCell.m */; };
 		D0101FEF225BA17A00A348EF /* QGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FEE225BA17A00A348EF /* QGCommentCell.m */; };
 		D0101FF3225BA6D900A348EF /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FF2225BA6D900A348EF /* NSString+Extension.m */; };
+		D02160F3225CEC860050647D /* QGUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02160F2225CEC860050647D /* QGUserInfoView.m */; };
 		D042711122526FE300FB1A26 /* QGHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFC622526A42002ACDFB /* QGHomeModel.m */; };
 		D062BAA8225739F20004833A /* QGPublishTopicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D062BAA7225739F20004833A /* QGPublishTopicVC.m */; };
 		D06585D122574327009BCECA /* QGControllerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D06585D022574327009BCECA /* QGControllerTool.m */; };
@@ -130,6 +131,10 @@
 		D0101FEE225BA17A00A348EF /* QGCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGCommentCell.m; sourceTree = "<group>"; };
 		D0101FF1225BA6D900A348EF /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		D0101FF2225BA6D900A348EF /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		D02160F1225CEC860050647D /* QGUserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGUserInfoView.h; sourceTree = "<group>"; };
+		D02160F2225CEC860050647D /* QGUserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGUserInfoView.m; sourceTree = "<group>"; };
+		D02160F4225CFA380050647D /* QGColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGColors.h; sourceTree = "<group>"; };
+		D02160F5225CFE5A0050647D /* QGFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGFont.h; sourceTree = "<group>"; };
 		D062BAA6225739F20004833A /* QGPublishTopicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGPublishTopicVC.h; sourceTree = "<group>"; };
 		D062BAA7225739F20004833A /* QGPublishTopicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGPublishTopicVC.m; sourceTree = "<group>"; };
 		D06585CF22574327009BCECA /* QGControllerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGControllerTool.h; sourceTree = "<group>"; };
@@ -195,25 +200,10 @@
 			isa = PBXGroup;
 			children = (
 				340FF9E9225AEDD70095C6A8 /* Controller */,
-				340FF9E8225AEDCA0095C6A8 /* View */,
-				340FF9E7225AEDC00095C6A8 /* Model */,
+				D02160F0225CEC690050647D /* Model */,
+				D02160EF225CEC5E0050647D /* View */,
 			);
 			path = "登录";
-			sourceTree = "<group>";
-		};
-		340FF9E7225AEDC00095C6A8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		340FF9E8225AEDCA0095C6A8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			path = ../View;
 			sourceTree = "<group>";
 		};
 		340FF9E9225AEDD70095C6A8 /* Controller */ = {
@@ -331,6 +321,20 @@
 				D0101FF2225BA6D900A348EF /* NSString+Extension.m */,
 			);
 			path = NSString;
+			sourceTree = "<group>";
+		};
+		D02160EF225CEC5E0050647D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D02160F0225CEC690050647D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D06585CE22574305009BCECA /* ControllerTool */ = {
@@ -467,6 +471,8 @@
 				D0101FEE225BA17A00A348EF /* QGCommentCell.m */,
 				3418C099225C70E400525A9C /* QGTopicCategoryView.h */,
 				3418C09A225C70E400525A9C /* QGTopicCategoryView.m */,
+				D02160F1225CEC860050647D /* QGUserInfoView.h */,
+				D02160F2225CEC860050647D /* QGUserInfoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -581,6 +587,8 @@
 				D080EFC42252513D002ACDFB /* QGHeaders.h */,
 				D0D7DC5522571FE200C78B8A /* QGDefines.h */,
 				D0101FC722589BA000A348EF /* QGConst.h */,
+				D02160F4225CFA380050647D /* QGColors.h */,
+				D02160F5225CFE5A0050647D /* QGFont.h */,
 				D080EF252250888C002ACDFB /* main.m */,
 			);
 			path = Other;
@@ -760,6 +768,7 @@
 				3418C09B225C70E400525A9C /* QGTopicCategoryView.m in Sources */,
 				D0101FC22258764400A348EF /* QGChangeUserInfoVC.m in Sources */,
 				340FF9F1225B1A450095C6A8 /* QGSubmitButton.m in Sources */,
+				D02160F3225CEC860050647D /* QGUserInfoView.m in Sources */,
 				D080EF3522508A01002ACDFB /* QGNavigationController.m in Sources */,
 				D0101FB622579FE800A348EF /* QGUserCenterCell2.m in Sources */,
 				D080EF57225114BE002ACDFB /* QGTabbar.m in Sources */,

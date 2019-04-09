@@ -57,8 +57,8 @@
     // - 昵称
     UILabel *nickNameLabel = [[UILabel alloc] init];
     nickNameLabel.text = @"";
-    nickNameLabel.textColor = [UIColor  colorWithHexString:@"A6A6B4"];
-    nickNameLabel.font = [UIFont systemFontOfSize:13];
+    nickNameLabel.textColor = colorGray999999();
+    nickNameLabel.font = fontNormal14();
     [self.contentView addSubview:nickNameLabel];
     self.nickNameLabel = nickNameLabel;
     
@@ -70,8 +70,8 @@
     // - 发布评论的时间
     UILabel *timeLabel = [[UILabel alloc] init];
     timeLabel.text =@"";
-    timeLabel.textColor = [UIColor colorWithHexString:@"A6A6B4"];
-    timeLabel.font = [UIFont systemFontOfSize:10];
+    timeLabel.textColor = colorGray999999();
+    timeLabel.font = fontNormal9();
     [self.contentView addSubview:timeLabel];
     self.timeLabel = timeLabel;
     
@@ -83,7 +83,7 @@
     // - 评论内容
     UILabel *commentLabel = [[UILabel alloc] init];
     commentLabel.numberOfLines = 0;
-    commentLabel.textColor = [UIColor colorWithHexString:@"333333"];
+    commentLabel.textColor = colorGray333333();
     commentLabel.textAlignment = NSTextAlignmentLeft;
     [self.contentView addSubview:commentLabel];
     self.commentLabel = commentLabel;

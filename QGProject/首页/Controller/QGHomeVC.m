@@ -14,6 +14,7 @@
 #import "QGHomeModel.h"
 #import "QGAllHomeModel.h"
 #import "QGPublishChooseCategoryVC.h"
+#import "QGUserInfoView.h"
 
 static NSString * const homeSliderCellID = @"homeSliderCellID";
 static NSString * const homeCategoryCellID = @"homeCategoryCellID";
@@ -34,6 +35,14 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupData];
+    QGUserInfoView *view = [[QGUserInfoView alloc]init];
+    view.userModel = nil;
+    [self.view addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view).offset(kNavigatonBarHei);
+        make.height.mas_equalTo(70);
+    }];
 }
 
 // - MARK: <-- 网络请求 -->
@@ -98,7 +107,6 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
                 make.bottom.equalTo(self.view).offset(-49);
             }
         }];
-
     }
     return _tableView;
 }

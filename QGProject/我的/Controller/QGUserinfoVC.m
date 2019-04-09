@@ -27,7 +27,7 @@ static NSString * const kUserinfoCell2ID = @"kUserinfoCell2ID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = colorGrayFFFFFF();
     self.title = @"个人信息";
     [self setupUI];
     

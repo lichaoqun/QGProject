@@ -22,6 +22,8 @@
 #import "DeviceHelper.h"
 #import "QGDefines.h"
 #import "QGConst.h"
+#import "QGColors.h"
+#import "QGFont.h"
 #import "QGControllerTool.h"
 #import "QGSubmitButton.h"
 #import "QGRequestTool.h"

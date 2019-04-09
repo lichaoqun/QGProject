@@ -32,8 +32,8 @@ int const itemCountPerRow = 5;
 - (UILabel *)categoryTitleLabel{
     if(!_categoryTitleLabel){
         UILabel *label = [[UILabel alloc]init];
-        label.textColor = [UIColor colorWithHexString:@"666666"];
-        label.font = [UIFont systemFontOfSize:12];
+        label.textColor = colorGray666666();
+        label.font = fontNormal12();
         label.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:label];
         self.categoryTitleLabel = label;

@@ -31,7 +31,7 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = colorGrayFFFFFF();
     
     [self setupUI];
     [self setupData];

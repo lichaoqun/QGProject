@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = colorGrayFFFFFF();
     [self setupUI];
     
     // - token 过期的处理
@@ -33,8 +33,8 @@
 -(void)setupUI{
     // - 标题的输入框
     HWTextView *titleTV = [[HWTextView alloc]initWithFrame:CGRectZero];
-    titleTV.font = [UIFont systemFontOfSize:18];
-    titleTV.backgroundColor = [UIColor colorWithHexString:@"F5F5F5"];
+    titleTV.font = fontNormal18();
+    titleTV.backgroundColor = colorGrayF5F5F5();
     [self.view addSubview:titleTV];
     self.titleTV = titleTV;
     titleTV.delegate = self;

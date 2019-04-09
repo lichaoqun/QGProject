@@ -30,8 +30,8 @@
 // - MARK: <-- 设置 UI -->
 -(void)setupUI{
     // - 图片
-    UIImageView *coverImageView=[[UIImageView alloc]init];;
-    coverImageView.backgroundColor=[UIColor whiteColor];
+    UIImageView *coverImageView=[[UIImageView alloc]init];
+    coverImageView.backgroundColor = colorGrayFFFFFF();
     [self.contentView addSubview:coverImageView];
     self.coverImageView = coverImageView;
     
