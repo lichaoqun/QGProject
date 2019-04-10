@@ -20,7 +20,7 @@
 @property(nonatomic, copy)NSString *sliderUrl;
 
 /** slider 的 id */
-@property(nonatomic, copy)NSString *sliderID;
+@property(nonatomic, copy)NSString *sliderId;
 
 /** slider 的 标题 */
 @property(nonatomic, copy)NSString *sliderTitle;
@@ -31,7 +31,7 @@
 @interface QGHomeCategoryModel : QGHomeBaseModel
 
 /** 分类的 id */
-@property(nonatomic, copy)NSString *cateID;
+@property(nonatomic, copy)NSString *cateId;
 
 /** 分类的名字 */
 @property(nonatomic, copy)NSString *cateName;
@@ -58,7 +58,6 @@
 
 /** 帖子作者 */
 @property (nonatomic, strong) QGUserModel *user;
-
 
 /** 是否是图片模式的 cell */
 @property(nonatomic, assign, readonly)BOOL showDesImageView;
