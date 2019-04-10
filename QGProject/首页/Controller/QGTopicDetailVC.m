@@ -11,6 +11,7 @@
 #import "QGTopicDetailTitleCell.h"
 #import "QGTopicDetailTextContentCell.h"
 #import "QGTopicDetailImageContentCell.h"
+#import "QGUserInfoView.h"
 
 static NSString * const kTopicDetailTitleCellID = @"kTopicDetailTitleCellID";
 static NSString * const kTopicDetailTextContentCellID = @"kTopicDetailTextContentCellID";
@@ -20,6 +21,9 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
 
 /** 初始化 tableView */
 @property (nonatomic, weak) UITableView *tableView;
+
+/** 用户信息的 view */
+@property (nonatomic, weak) QGUserInfoView *userInfoView;
 
 /** model 数组 */
 @property (nonatomic, strong) NSMutableArray *modelArray;
@@ -41,6 +45,15 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
 /** 初始化 UI */
 -(void)setupUI{
     
+    QGUserInfoView *userInfoView = [[QGUserInfoView alloc]init];
+    [self.view addSubview:userInfoView];
+    self.userInfoView = userInfoView;
+    [userInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view);
+        make.height.mas_equalTo(70);
+    }];
+    
     // - 初始化tableView
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     tableView.delegate = self;
@@ -49,7 +62,8 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
     [self.view addSubview:tableView];
     self.tableView = tableView;
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.equalTo(self.view);
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(userInfoView.mas_bottom);
     }];
     
     // - 注册 cell
@@ -67,8 +81,12 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
         if (responeModel.code == 0) {
             QGTopicDetailModel *detailModel = [QGTopicDetailModel yy_modelWithJSON:responeModel.data];
             
+            // - 用户信息
+            self.userInfoView.userModel = detailModel.user;
+            
             // - 标题
             QGTopicDetailTitleContentModel *titleModel = detailModel.topicTitle;
+            self.title = titleModel.title;
             NSArray *titleModelArray = [NSArray arrayWithObject:titleModel];
             [self.modelArray addObject:titleModelArray];
             
@@ -128,17 +146,19 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
             cell.imgContentModel = (QGTopicDetailImageContentModel *)model;
             return cell;
         }
-            
         default:
             return nil;
     }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
     NSArray *models = self.modelArray[indexPath.section];
     QGTopicDetailContentModel *model = models[indexPath.row];
     return model.cellHeight;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 
 @end

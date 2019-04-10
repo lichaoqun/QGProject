@@ -41,7 +41,7 @@
     UILabel *topicTitleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     topicTitleLabel.textColor = colorGray333333();
     topicTitleLabel.font = fontBold16();
-    topicTitleLabel.numberOfLines = 2;
+    topicTitleLabel.numberOfLines = 0;
     [self.contentView addSubview:topicTitleLabel];
     self.topicTitleLabel = topicTitleLabel;
     
@@ -64,7 +64,7 @@
         make.top.equalTo(topicTitleLabel.mas_bottom).offset(10);
     }];
     
-    /**  分类的 lable */
+    /**  发布时间 lable */
     UILabel *timeLabel = [[UILabel alloc]init];
     timeLabel.textColor = colorGray999999();
     timeLabel.font = fontNormal12();

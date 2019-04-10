@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) QGTopicDetailTitleContentModel *topicTitle;
 
 /** 发布人的信息 */
-@property(nonatomic, strong)QGUserModel *publishUser;
+@property(nonatomic, strong)QGUserModel *user;
 
 @end
 

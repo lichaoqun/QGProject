@@ -44,9 +44,9 @@
 /** 赋值 model */
 -(void)setUserModel:(QGUserModel *)userModel{
     _userModel = userModel;
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:@"http://upstatic.qiecdn.com/upload/homeset/201904011524085965.jpg"]];
-    self.userNameLabel.text = @"李超群";
-    self.userPhoneNumLabel.text = @"1821159457";
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatar]];
+    self.userNameLabel.text = userModel.nickName;
+    self.userPhoneNumLabel.text = userModel.userName;
     [self callButton];
 }
 
@@ -83,6 +83,7 @@
         [userNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.avatarImageView.mas_right).offset(10);
             make.top.equalTo(self.avatarImageView);
+            make.right.equalTo(self.callButton.mas_left).offset(-10);
         }];
     }
     return _userNameLabel;
@@ -101,6 +102,7 @@
         [userPhoneNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.userNameLabel);
             make.bottom.equalTo(self.avatarImageView);
+            make.right.equalTo(self.callButton.mas_left).offset(-10);
         }];
     }
     return _userPhoneNumLabel;
