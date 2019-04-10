@@ -13,7 +13,7 @@
 @end
 
 // - MARK: <-- sliderModel -->
-@implementation sliderUrlQGHomeSlierModel
+@implementation QGHomeSlierModel
 
 @end
 
