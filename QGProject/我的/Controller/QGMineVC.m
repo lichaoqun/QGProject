@@ -32,16 +32,6 @@ static NSString * const kUserCenterCell2ID = @"kUserCenterCell2ID";
     [self addTokenPassNoti];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [QGRequestTool loginWithPhoneNum:nil verificationCode:nil complete:^(QGResponeModel *responeModel) {
-        if (responeModel.code == 0) {
-        }else{
-            [YJProgressHUD showMessage:responeModel.msg inView:self.view];
-        }
-    }];
-}
-
 // - MARK: <-- 绘制 UI -->
 -(void)setupUI{
     UITableView *userCenterTabView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];

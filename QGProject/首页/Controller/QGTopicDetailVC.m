@@ -86,7 +86,7 @@ static NSString * const kTopicDetailImageContentCellID = @"kTopicDetailImageCont
             
             // - 标题
             QGTopicDetailTitleContentModel *titleModel = detailModel.topicTitle;
-            self.title = titleModel.title;
+            self.title = titleModel.contentTitle;
             NSArray *titleModelArray = [NSArray arrayWithObject:titleModel];
             [self.modelArray addObject:titleModelArray];
             

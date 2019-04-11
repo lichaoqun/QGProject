@@ -29,13 +29,13 @@ typedef NS_ENUM(NSUInteger, QGTopicModelType) {
 @interface QGTopicDetailTitleContentModel : QGTopicDetailContentModel
 
 /** 发帖的时间戳 */
-@property(nonatomic, assign)NSTimeInterval createTime;
+@property(nonatomic, assign)NSTimeInterval contentPublishTime;
 
 /** 发帖的标题 */
-@property(nonatomic, copy)NSString *title;
+@property(nonatomic, copy)NSString *contentTitle;
 
 /** 帖子的分类 */
-@property(nonatomic, copy)NSString *category;
+@property(nonatomic, copy)NSString *cateName;
 
 @end
 

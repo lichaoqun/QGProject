@@ -52,7 +52,7 @@
         }];
         
         // - 计算 cell 行高
-        CGFloat hei = [topicModel.topicDesc boundingRectWithSize:CGSizeMake(self.width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.topicDetailTitleLabel.font} context:nil].size.height;
+        CGFloat hei = [topicModel.contentSummary boundingRectWithSize:CGSizeMake(self.width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.topicDetailTitleLabel.font} context:nil].size.height;
         CGFloat maxH = 50;
         originalHei += MIN(hei, maxH);
         [self.topicDetailTitleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -60,7 +60,7 @@
         }];
     }else{
         CGFloat imgH = 70;
-        [self.topicDesImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.topicImageUrl]];
+        [self.topicDesImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.contentImgUrl]];
         [self.topicDesImageView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(imgH, imgH));
             make.right.equalTo(self.contentView).offset(-10);
@@ -77,14 +77,14 @@
     topicModel.cellHeight = originalHei;
 
     // - 标题和内容
-    self.topicTitleLabel.text = topicModel.topicTitle.title;
-    self.topicDetailTitleLabel.text = topicModel.topicDesc;
-    self.publishTimeLabel.text = [NSString formatTimeWithInterval:topicModel.topicTitle.createTime];
+    self.topicTitleLabel.text = topicModel.content.contentTitle;
+    self.topicDetailTitleLabel.text = topicModel.contentSummary;
+    self.publishTimeLabel.text = [NSString formatTimeWithInterval:topicModel.content.contentPublishTime];
     
     // - 发帖人信息
     [self.author_iconImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.user.avatar]];
     self.author_nameLabel.text = topicModel.user.nickName;
-    self.categoryView.category = topicModel.topicTitle.category;
+    self.categoryView.category = topicModel.content.cateName;
 }
 
 // - MARK: <-- 懒加载 -->

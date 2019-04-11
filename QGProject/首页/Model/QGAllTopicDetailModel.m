@@ -17,7 +17,7 @@
 /** cell的高度 */
 - (CGFloat)cellHeight{
     CGFloat width = kScreenWidth - (2 * kCellLRPadding);
-    CGFloat textHei = [self.title heightForFont:fontBold16() width:width];
+    CGFloat textHei = [self.contentTitle heightForFont:fontBold16() width:width];
     return (10 + ceilf(textHei) + 10 + 20);
 }
 @end

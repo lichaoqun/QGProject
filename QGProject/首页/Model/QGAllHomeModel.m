@@ -26,7 +26,7 @@
 @implementation QGHomeTopicModel
 
 -(BOOL)showDesImageView{
-    return ((self.topicImageUrl) && (self.topicImageUrl.length > 0));
+    return ((self.contentImgUrl) && (self.contentImgUrl.length > 0));
 }
 
 @end

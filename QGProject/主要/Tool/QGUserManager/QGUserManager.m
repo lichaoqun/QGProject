@@ -24,6 +24,16 @@ static QGUserManager *userManager_;
     return userManager_;
 }
 
+/** 更新用户信息 */
++(void)refreshUserInfo{
+    /** 获取用户信息 */
+    [QGRequestTool judgeTokenComplete:^(QGResponeModel *responeModel) {
+        if (responeModel.code == 0) {
+            [QGUserManager shareMgr].userModel = [QGUserModel yy_modelWithJSON:responeModel.data];
+        }
+    }];
+}
+
 /** 清空 token */
 +(void)setTokenNULL{
     [QGUserManager shareMgr].token = nil;

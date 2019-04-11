@@ -45,16 +45,16 @@
 @interface QGHomeTopicModel : QGHomeBaseModel
 
 /** 帖子内容的 id */
-@property(nonatomic, copy)NSString *topicID;
+@property(nonatomic, copy)NSString *contentId;
 
 /** 标题的label */
-@property (nonatomic, strong) QGTopicDetailTitleContentModel *topicTitle;
+@property (nonatomic, strong) QGTopicDetailTitleContentModel *content;
 
 /** 帖子内容的简介 */
-@property(nonatomic, copy)NSString *topicDesc;
+@property(nonatomic, copy)NSString *contentSummary;
 
 /** 帖子内容的图片 */
-@property(nonatomic, copy)NSString *topicImageUrl;
+@property(nonatomic, copy)NSString *contentImgUrl;
 
 /** 帖子作者 */
 @property (nonatomic, strong) QGUserModel *user;

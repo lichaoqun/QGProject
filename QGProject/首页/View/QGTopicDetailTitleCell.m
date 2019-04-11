@@ -80,8 +80,8 @@
 // - MARK: <-- 设置数据 -->
 -(void)setTitleModel:(QGTopicDetailTitleContentModel *)titleModel{
     _titleModel = titleModel;
-    self.topicTitleLabel.text = titleModel.title;
-    self.categoryView.category = titleModel.category;
-    self.timeLabel.text = [NSString formatTimeWithInterval:titleModel.createTime];
+    self.topicTitleLabel.text = titleModel.contentTitle;
+    self.categoryView.category = titleModel.cateName;
+    self.timeLabel.text = [NSString formatTimeWithInterval:titleModel.contentPublishTime];
 }
 @end
