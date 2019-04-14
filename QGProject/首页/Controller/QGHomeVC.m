@@ -175,9 +175,13 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    QGTopicDetailVC *detailVC = [[QGTopicDetailVC alloc]init];
-    [self.navigationController pushViewController:detailVC animated:YES];
+    QGHomeModel *model = self.modelsArray[indexPath.section];
+    if (model.dataType == QGHomeDataTypeTopic) {
+        QGHomeTopicModel *topicModel = (QGHomeTopicModel *)model.dataContent[indexPath.row];
+        QGTopicDetailVC *detailVC = [[QGTopicDetailVC alloc]init];
+        detailVC.topicModel = topicModel;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
 }
 
 /** 轮播图图片点击的回调 */

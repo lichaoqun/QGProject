@@ -42,7 +42,7 @@
     [titleTV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(80);
-        make.top.equalTo(self.view).offset(kNavigatonBarHei + 40);
+        make.top.equalTo(self.view).offset(40);
     }];
     
     // - 修改按钮

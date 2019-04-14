@@ -22,9 +22,6 @@
 /** 用户 ID */
 @property(nonatomic, copy)NSString *userId;
 
-/** 认证机构 */
-@property (nonatomic, copy) NSString *orgName;
-
 /** 认证机构名称 */
 @property (nonatomic, copy) NSString *orgName;
 

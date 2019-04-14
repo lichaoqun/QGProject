@@ -10,4 +10,10 @@
 
 @implementation QGTopicDetailModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"contentLinkSummaries" : [QGTopicDetailTextContentModel class],
+             @"contentLinkPhotos" : [QGTopicDetailImageContentModel class]
+             };
+}
+
 @end

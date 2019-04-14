@@ -36,7 +36,17 @@
 
 /** 获取帖子的详细信息 */
 +(NSURLSessionTask *)getTopicDetailWithTopicID:(NSString *)topicID complete:(QGResponeComplete)complete{
-    return [self GET:@"http://www.dev.qi-e.tv/qie_news/qie_news/news_detail?aid=ios&carrier=%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8&client_sys=ios&device_id=a8e12b615ff2723beaf5404933e29aa1&manufacturer=Apple&model=iPhone10,1&os_version=11.4.1&time=1554776280&vercode=6.1.0.0&version=6.1.0.0&wifi=1&auth=f14697bf1c7f2f6c02c73801ce48e2ff" parameters:nil complete:complete];
+    return [self GET:@"content/contentdetails" parameters:@{@"contentId" : topicID} complete:complete];
+}
+
+/** 获取帖子的评论信息 */
++(NSURLSessionTask *)getCommentListWithTopicID:(NSString *)topicID page:(int)page complete:(QGResponeComplete)complete{
+    return [self GET:@"comment/comments" parameters:@{
+                                                        @"contentId" : topicID,
+                                                        @"page" : @(page),
+                                                        @"size" : @"10"
+                                                        } complete:complete];
+
 }
 
 @end

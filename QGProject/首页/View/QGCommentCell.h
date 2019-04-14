@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QGTopicDetailCommentModel.h"
+#import "QGAllTopicDetailModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QGCommentCell : UITableViewCell
 
 /** 评论的 model */
-@property(nonatomic, strong)QGTopicDetailCommentModel *commentModel;
+@property(nonatomic, strong)QGTopicDetailCommentContentModel *commentModel;
 
 @end
 

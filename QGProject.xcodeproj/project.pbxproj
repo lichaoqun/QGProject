@@ -18,6 +18,10 @@
 		3418C09B225C70E400525A9C /* QGTopicCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3418C09A225C70E400525A9C /* QGTopicCategoryView.m */; };
 		3418C0A1225C87A600525A9C /* QGAllHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3418C0A0225C87A600525A9C /* QGAllHomeModel.m */; };
 		3418C0A4225C88D800525A9C /* QGAllTopicDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3418C0A3225C88D800525A9C /* QGAllTopicDetailModel.m */; };
+		3422D5CE2262ED800087C5E1 /* DYNewsCommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422D5CB2262ED7F0087C5E1 /* DYNewsCommentInputView.m */; };
+		3422D5CF2262ED800087C5E1 /* DYNewsCommentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422D5CD2262ED800087C5E1 /* DYNewsCommentBottomView.m */; };
+		3422D5D522632FFE0087C5E1 /* QGCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422D5D422632FFE0087C5E1 /* QGCommentHeaderView.m */; };
+		3422D5D8226335380087C5E1 /* QGInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422D5D7226335370087C5E1 /* QGInputView.m */; };
 		34B62E3B225F12F6001F1E07 /* QGAppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B62E3A225F12F6001F1E07 /* QGAppDelegate+Extension.m */; };
 		D0101FA7225779E200A348EF /* QGPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FA6225779E200A348EF /* QGPicModel.m */; };
 		D0101FAD2257970900A348EF /* HWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FAC2257970900A348EF /* HWTextView.m */; };
@@ -33,7 +37,6 @@
 		D0101FD122589F0E00A348EF /* ZZQAvatarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FCB22589F0E00A348EF /* ZZQAvatarPicker.m */; };
 		D0101FD222589F0E00A348EF /* ZZQResourceSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FCC22589F0E00A348EF /* ZZQResourceSheetView.m */; };
 		D0101FD7225B915900A348EF /* QGTopicDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FD6225B915900A348EF /* QGTopicDetailVC.m */; };
-		D0101FE0225B92E700A348EF /* QGTopicDetailCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FDF225B92E700A348EF /* QGTopicDetailCommentModel.m */; };
 		D0101FE6225B9EA000A348EF /* QGTopicDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FE5225B9EA000A348EF /* QGTopicDetailModel.m */; };
 		D0101FE9225BA14D00A348EF /* QGTopicDetailTextContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FE8225BA14C00A348EF /* QGTopicDetailTextContentCell.m */; };
 		D0101FEC225BA15A00A348EF /* QGTopicDetailImageContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FEB225BA15A00A348EF /* QGTopicDetailImageContentCell.m */; };
@@ -89,6 +92,14 @@
 		3418C0A0225C87A600525A9C /* QGAllHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAllHomeModel.m; sourceTree = "<group>"; };
 		3418C0A2225C88D800525A9C /* QGAllTopicDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAllTopicDetailModel.h; sourceTree = "<group>"; };
 		3418C0A3225C88D800525A9C /* QGAllTopicDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAllTopicDetailModel.m; sourceTree = "<group>"; };
+		3422D5CA2262ED7F0087C5E1 /* DYNewsCommentBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYNewsCommentBottomView.h; sourceTree = "<group>"; };
+		3422D5CB2262ED7F0087C5E1 /* DYNewsCommentInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYNewsCommentInputView.m; sourceTree = "<group>"; };
+		3422D5CC2262ED7F0087C5E1 /* DYNewsCommentInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYNewsCommentInputView.h; sourceTree = "<group>"; };
+		3422D5CD2262ED800087C5E1 /* DYNewsCommentBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYNewsCommentBottomView.m; sourceTree = "<group>"; };
+		3422D5D322632FFE0087C5E1 /* QGCommentHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGCommentHeaderView.h; sourceTree = "<group>"; };
+		3422D5D422632FFE0087C5E1 /* QGCommentHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGCommentHeaderView.m; sourceTree = "<group>"; };
+		3422D5D6226335370087C5E1 /* QGInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGInputView.h; sourceTree = "<group>"; };
+		3422D5D7226335370087C5E1 /* QGInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGInputView.m; sourceTree = "<group>"; };
 		34B62E39225F12F6001F1E07 /* QGAppDelegate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QGAppDelegate+Extension.h"; sourceTree = "<group>"; };
 		34B62E3A225F12F6001F1E07 /* QGAppDelegate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QGAppDelegate+Extension.m"; sourceTree = "<group>"; };
 		8467D65BEE33BF7C6DD24E68 /* libPods-QGProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QGProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,8 +133,6 @@
 		D0101FCF22589F0E00A348EF /* ZZQAvatarPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZQAvatarPicker.h; sourceTree = "<group>"; };
 		D0101FD5225B915900A348EF /* QGTopicDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailVC.h; sourceTree = "<group>"; };
 		D0101FD6225B915900A348EF /* QGTopicDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailVC.m; sourceTree = "<group>"; };
-		D0101FDE225B92E700A348EF /* QGTopicDetailCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailCommentModel.h; sourceTree = "<group>"; };
-		D0101FDF225B92E700A348EF /* QGTopicDetailCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailCommentModel.m; sourceTree = "<group>"; };
 		D0101FE4225B9EA000A348EF /* QGTopicDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailModel.h; sourceTree = "<group>"; };
 		D0101FE5225B9EA000A348EF /* QGTopicDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicDetailModel.m; sourceTree = "<group>"; };
 		D0101FE7225BA14C00A348EF /* QGTopicDetailTextContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicDetailTextContentCell.h; sourceTree = "<group>"; };
@@ -447,8 +456,6 @@
 				3418C0A3225C88D800525A9C /* QGAllTopicDetailModel.m */,
 				D0101FE4225B9EA000A348EF /* QGTopicDetailModel.h */,
 				D0101FE5225B9EA000A348EF /* QGTopicDetailModel.m */,
-				D0101FDE225B92E700A348EF /* QGTopicDetailCommentModel.h */,
-				D0101FDF225B92E700A348EF /* QGTopicDetailCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -456,6 +463,12 @@
 		D080EF4522508E67002ACDFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3422D5CA2262ED7F0087C5E1 /* DYNewsCommentBottomView.h */,
+				3422D5CD2262ED800087C5E1 /* DYNewsCommentBottomView.m */,
+				3422D5CC2262ED7F0087C5E1 /* DYNewsCommentInputView.h */,
+				3422D5CB2262ED7F0087C5E1 /* DYNewsCommentInputView.m */,
+				3422D5D6226335370087C5E1 /* QGInputView.h */,
+				3422D5D7226335370087C5E1 /* QGInputView.m */,
 				D080EFAA22524949002ACDFB /* QGHomeSliderCell.h */,
 				D080EFAB22524949002ACDFB /* QGHomeSliderCell.m */,
 				D080EFB422524C8A002ACDFB /* QGHomeCategoryCell.h */,
@@ -476,6 +489,8 @@
 				3418C09A225C70E400525A9C /* QGTopicCategoryView.m */,
 				D02160F1225CEC860050647D /* QGUserInfoView.h */,
 				D02160F2225CEC860050647D /* QGUserInfoView.m */,
+				3422D5D322632FFE0087C5E1 /* QGCommentHeaderView.h */,
+				3422D5D422632FFE0087C5E1 /* QGCommentHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -703,11 +718,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QGProject/Pods-QGProject-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 				"${PODS_ROOT}/YJProgressHUD/YJProgressHUDK/images.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/images.bundle",
 			);
@@ -741,19 +758,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3422D5D8226335380087C5E1 /* QGInputView.m in Sources */,
 				D0101FE6225B9EA000A348EF /* QGTopicDetailModel.m in Sources */,
 				D080EF262250888C002ACDFB /* main.m in Sources */,
 				D0101FB322579FDA00A348EF /* QGUserCenterCell1.m in Sources */,
 				340FF9ED225B15EA0095C6A8 /* CountDown.m in Sources */,
 				D062BAA8225739F20004833A /* QGPublishTopicVC.m in Sources */,
 				D0101FBC22585E4400A348EF /* QGUserInfoCell2.m in Sources */,
+				3422D5CE2262ED800087C5E1 /* DYNewsCommentInputView.m in Sources */,
 				D0101FF3225BA6D900A348EF /* NSString+Extension.m in Sources */,
 				D080EFB022524B75002ACDFB /* QGModel.m in Sources */,
+				3422D5CF2262ED800087C5E1 /* DYNewsCommentBottomView.m in Sources */,
 				D0101FD7225B915900A348EF /* QGTopicDetailVC.m in Sources */,
 				D080EF3B22508DA8002ACDFB /* QGHomeVC.m in Sources */,
 				D0101FAD2257970900A348EF /* HWTextView.m in Sources */,
 				340FF9E6225AEDBA0095C6A8 /* QGLoginVC.m in Sources */,
 				34B62E3B225F12F6001F1E07 /* QGAppDelegate+Extension.m in Sources */,
+				3422D5D522632FFE0087C5E1 /* QGCommentHeaderView.m in Sources */,
 				D0101FD022589F0E00A348EF /* ZZQAuthorizationManager.m in Sources */,
 				D0101FE9225BA14D00A348EF /* QGTopicDetailTextContentCell.m in Sources */,
 				D0101FEC225BA15A00A348EF /* QGTopicDetailImageContentCell.m in Sources */,
@@ -764,7 +785,6 @@
 				D080EFC222524EBA002ACDFB /* QGHomeTopicCell.m in Sources */,
 				D080EF1822508887002ACDFB /* QGAppDelegate.m in Sources */,
 				D0D7DC5422571FB300C78B8A /* DeviceHelper.m in Sources */,
-				D0101FE0225B92E700A348EF /* QGTopicDetailCommentModel.m in Sources */,
 				D0101FB922579FFB00A348EF /* QGUserInfoCell1.m in Sources */,
 				D080EF3822508D8D002ACDFB /* QGBaseVC.m in Sources */,
 				340FF9FE225B25070095C6A8 /* QGResponeModel.m in Sources */,

@@ -43,7 +43,7 @@
 // - MARK: <-- 设置数据 -->
 -(void)setImgContentModel:(QGTopicDetailImageContentModel *)imgContentModel{
     _imgContentModel = imgContentModel;
-    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:imgContentModel.imgUrl]];
+    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:imgContentModel.contentAuthorIconUrl]];
 }
 
 @end

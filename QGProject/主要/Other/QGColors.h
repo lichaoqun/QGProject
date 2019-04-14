@@ -23,6 +23,10 @@ static inline UIColor* colorGray999999() {
     return [UIColor colorWithHexString:@"999999"];
 }
 
+static inline UIColor* colorGrayEFEFEF() {
+    return [UIColor colorWithHexString:@"EFEFEF"];
+}
+
 static inline UIColor* colorGrayF5F5F5() {
     return [UIColor colorWithHexString:@"F5F5F5"];
 }

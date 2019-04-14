@@ -12,7 +12,8 @@
 typedef NS_ENUM(NSUInteger, QGTopicModelType) {
     QGTopicModelTypeTitle, // - 标题类型
     QGTopicModelTypeText, // - 文字类型
-    QGTopicModelTypeImage // - 图片类型
+    QGTopicModelTypeImage, // - 图片类型
+    QGTopicModelTypeCommont // - 图片类型
 };
 
 @interface QGTopicDetailContentModel : QGModel
@@ -43,7 +44,7 @@ typedef NS_ENUM(NSUInteger, QGTopicModelType) {
 @interface QGTopicDetailTextContentModel : QGTopicDetailContentModel
 
 /** 帖子的文字 */
-@property(nonatomic, copy)NSString *content;
+@property(nonatomic, copy)NSString *contentSummary;
 
 @end
 
@@ -57,6 +58,26 @@ typedef NS_ENUM(NSUInteger, QGTopicModelType) {
 @property(nonatomic, assign)CGFloat imgWidth;
 
 /** 图片地址 */
-@property(nonatomic, copy)NSString *imgUrl;
+@property(nonatomic, copy)NSString *contentAuthorIconUrl;
+
+@end
+
+// - MARK: <-- 评论的 model -->
+@interface QGTopicDetailCommentContentModel : QGTopicDetailContentModel
+
+/** 评论的 id */
+@property(nonatomic, copy)NSString *commentId;
+
+/**  评论的详情 */
+@property(nonatomic, copy)NSString *commentDetail;
+
+/** 评论的时间 */
+@property(nonatomic, assign)NSTimeInterval commentTime;
+
+/** 评论的用户 model */
+@property(nonatomic, strong)QGUserModel *user;
+
+/** 评论的评论 */
+@property (nonatomic, strong) NSArray <QGTopicDetailCommentContentModel *> *commentReturns;
 
 @end

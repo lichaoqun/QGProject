@@ -18,6 +18,9 @@ static NSString * const kUserCenterCell2ID = @"kUserCenterCell2ID";
 
 @interface QGMineVC ()<UITableViewDelegate, UITableViewDataSource>
 
+/** 个人中心的 tableView */
+@property (nonatomic, weak) UITableView *userCenterTabView;
+
 @end
 
 @implementation QGMineVC
@@ -32,6 +35,11 @@ static NSString * const kUserCenterCell2ID = @"kUserCenterCell2ID";
     [self addTokenPassNoti];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.userCenterTabView reloadData];
+}
+
 // - MARK: <-- 绘制 UI -->
 -(void)setupUI{
     UITableView *userCenterTabView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
@@ -40,6 +48,7 @@ static NSString * const kUserCenterCell2ID = @"kUserCenterCell2ID";
     [userCenterTabView registerClass:[QGUserCenterCell1 class] forCellReuseIdentifier:kUserCenterCell1ID];
     [userCenterTabView registerClass:[QGUserCenterCell2 class] forCellReuseIdentifier:kUserCenterCell2ID];
     [self.view addSubview:userCenterTabView];
+    _userCenterTabView = userCenterTabView;
     [userCenterTabView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
         make.bottom.equalTo(self.view).offset(-kIndicatorHei);

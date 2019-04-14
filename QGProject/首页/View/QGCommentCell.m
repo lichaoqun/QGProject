@@ -77,7 +77,7 @@
     
     [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(nickNameLabel);
-        make.top.equalTo(nickNameLabel.mas_bottom).offset(10);
+        make.top.equalTo(nickNameLabel.mas_bottom).offset(5);
     }];
     
     // - 评论内容
@@ -85,22 +85,23 @@
     commentLabel.numberOfLines = 0;
     commentLabel.textColor = colorGray333333();
     commentLabel.textAlignment = NSTextAlignmentLeft;
+    commentLabel.font = fontNormal14();
     [self.contentView addSubview:commentLabel];
     self.commentLabel = commentLabel;
     
     [commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(nickNameLabel);
         make.right.equalTo(self.contentView).offset(-kCellLRPadding);
-        make.top.equalTo(timeLabel.mas_bottom).offset(10);
+        make.top.equalTo(timeLabel.mas_bottom).offset(5);
     }];
 }
 
 // - MARK: <-- 设置 model -->
-- (void)setCommentModel:(QGTopicDetailCommentModel *)commentModel{
+- (void)setCommentModel:(QGTopicDetailCommentContentModel *)commentModel{
     _commentModel = commentModel;
     
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:commentModel.commentUserModel.avatar]];
-    self.nickNameLabel.text = commentModel.commentUserModel.nickName;
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:commentModel.user.avatar]];
+    self.nickNameLabel.text = commentModel.user.nickName;
     self.timeLabel.text = [NSString formatTimeWithInterval:commentModel.commentTime];
     self.commentLabel.text = commentModel.commentDetail;
 }

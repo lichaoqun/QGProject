@@ -49,7 +49,7 @@
 // - MARK: <-- 设置数据 -->
 -(void)setTextContentModel:(QGTopicDetailTextContentModel *)textContentModel{
     _textContentModel = textContentModel;
-    self.textContentLable.text = textContentModel.content;
+    self.textContentLable.text = textContentModel.contentSummary;
 }
 
 @end

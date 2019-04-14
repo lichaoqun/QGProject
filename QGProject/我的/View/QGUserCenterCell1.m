@@ -14,7 +14,10 @@
 @property(nonatomic, weak)UIImageView *headerImageView;
 
 /** 昵称的 label */
-@property(nonatomic, weak)UILabel *nameLabel;
+@property(nonatomic, weak)UILabel *nickNameLabel;
+
+/** 昵称的 label */
+@property(nonatomic, weak)UILabel *userNameLabel;
 
 @end
 
@@ -33,10 +36,12 @@
     _userModel = userModel;
     if ([QGUserManager shareMgr].token) {
         [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatar]];
-        self.nameLabel.text = userModel.nickName;
+        self.nickNameLabel.text = userModel.nickName;
+        self.userNameLabel.text = userModel.userName;
     }else{
         self.headerImageView.image = [UIImage imageNamed:@"defautl_user_icon"];
-         self.nameLabel.text = @"请登录";
+         self.nickNameLabel.text = @"请登录";
+        self.userNameLabel.text = @"登录查看更多信息";
     }
 }
 
@@ -61,22 +66,39 @@
 }
 
 /** 昵称的 label */
-- (UILabel *)nameLabel{
-    if(!_nameLabel){
-        UILabel *nameLabel = [[UILabel alloc] init];
-        nameLabel.textAlignment = NSTextAlignmentLeft;
-        nameLabel.font = fontNormal14();
-        nameLabel.textColor = colorGray333333();
-        [self.contentView addSubview:nameLabel];
-        _nameLabel = nameLabel;
+- (UILabel *)nickNameLabel{
+    if(!_nickNameLabel){
+        UILabel *nickNameLabel = [[UILabel alloc] init];
+        nickNameLabel.textAlignment = NSTextAlignmentLeft;
+        nickNameLabel.font = fontNormal14();
+        nickNameLabel.textColor = colorGray333333();
+        [self.contentView addSubview:nickNameLabel];
+        _nickNameLabel = nickNameLabel;
         
-        [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        [nickNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.headerImageView.mas_right).offset(10);
-            make.centerY.equalTo(self.headerImageView);
+            make.top.equalTo(self.headerImageView);
             make.right.equalTo(self.contentView).offset(-30);
         }];
     }
-    return _nameLabel;
+    return _nickNameLabel;
+}
+
+- (UILabel *)userNameLabel{
+    if(!_userNameLabel){
+        UILabel *userNameLabel = [[UILabel alloc] init];
+        userNameLabel.textAlignment = NSTextAlignmentLeft;
+        userNameLabel.font = fontNormal14();
+        userNameLabel.textColor = colorGray666666();
+        [self.contentView addSubview:userNameLabel];
+        _userNameLabel = userNameLabel;
+        
+        [userNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.nickNameLabel);
+            make.bottom.equalTo(self.headerImageView);
+        }];
+    }
+    return _userNameLabel;
 }
 
 @end

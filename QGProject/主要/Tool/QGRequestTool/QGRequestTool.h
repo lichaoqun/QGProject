@@ -26,4 +26,7 @@
 /** 获取帖子的详细信息 */
 +(NSURLSession *)getTopicDetailWithTopicID:(NSString *)topicID complete:(QGResponeComplete)complete;
 
+/** 获取帖子的评论信息 */
++(NSURLSessionTask *)getCommentListWithTopicID:(NSString *)topicID page:(int)page complete:(QGResponeComplete)complete;
+
 @end
