@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** 帖子的 model */
 @property(nonatomic, strong)QGHomeTopicModel *topicModel;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

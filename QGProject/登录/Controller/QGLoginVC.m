@@ -20,6 +20,11 @@
 /** 登录成功回调的 block */
 @property (nonatomic, copy) void(^loginComplete)(QGUserModel *) ;
 
+/** 手机号 */
+@property (nonatomic, weak) UITextField *phoneNumTF;
+
+/** 验证码 */
+@property (nonatomic, weak) UITextField *verificationNumTF;
 
 @end
 
@@ -61,6 +66,7 @@
     phoneNumTF.keyboardType = UIKeyboardTypePhonePad;
     phoneNumTF.textColor = colorGray333333();
     phoneNumTF.font = fontNormal14();
+    self.phoneNumTF = phoneNumTF;
     
     [phoneNumTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(40);
@@ -78,6 +84,7 @@
     verificationNumTF.keyboardType = UIKeyboardTypePhonePad;
     verificationNumTF.textColor = colorGray333333();
     verificationNumTF.font = fontNormal14();
+    self.verificationNumTF = verificationNumTF;
     
     [verificationNumTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(phoneNumTF);
@@ -121,28 +128,64 @@
 // - MARK: <-- 按钮的事件监听 -->
 /** 发送验证码 */
 -(void)onSendButtonClick:(UIButton *)sender{
-    sender.enabled = NO;
-    self.countNum = 60;
-    [self.countMgr countDownWithPER_SECBlock:^{
-        self.countNum -- ;
-        if (self.countNum == 0) {
-            [self.countMgr destoryTimer];
-            self.countMgr = nil;
-            sender.enabled = YES;
+    
+    // - 没填写手机号
+    if (!self.phoneNumTF.text.length) {
+        [YJProgressHUD showMessage:@"请填写手机号" inView:self.view];
+        return;
+    }
+    
+    // - 获取验证码接口
+    [QGRequestTool sendVerificationNumWithPhone:self.phoneNumTF.text complete:^(QGResponeModel *responeModel) {
+        if (responeModel.code == 0) {
+            
+            // - 获取验证码成功
+            sender.enabled = NO;
+            self.countNum = 60;
+            
+            // - 倒计时
+            [self.countMgr countDownWithPER_SECBlock:^{
+                self.countNum -- ;
+                
+                // - 倒计时60s时间到
+                if (self.countNum == 0) {
+                    [self.countMgr destoryTimer];
+                    self.countMgr = nil;
+                    sender.enabled = YES;
+                }else{
+                    
+                    // - 显示文字
+                    NSString *countNumStr = [NSString  stringWithFormat:@"%d秒后重发", self.countNum];
+                    [sender setTitle:countNumStr forState:UIControlStateDisabled];
+                }
+            }];
+
         }else{
-            NSString *countNumStr = [NSString  stringWithFormat:@"%d秒后重发", self.countNum];
-            [sender setTitle:countNumStr forState:UIControlStateDisabled];
+            [YJProgressHUD showMessage:responeModel.msg inView:self.view];
         }
     }];
 }
 
 /** 登录按钮 */
 -(void)onLoginButtonClick{
-    [QGRequestTool loginWithPhoneNum:nil verificationCode:nil complete:^(QGResponeModel *responeModel) {
+    
+    // - 判断手机号和验证码
+    if (!self.phoneNumTF.text.length) {
+        [YJProgressHUD showMessage:@"请填写手机号" inView:self.view];
+        return;
+    }
+    if (!self.verificationNumTF.text.length) {
+        [YJProgressHUD showMessage:@"请填写验证码" inView:self.view];
+        return;
+    }
+
+    // - 登录请求
+    [QGRequestTool loginWithPhoneNum:self.phoneNumTF.text verificationCode:self.verificationNumTF.text complete:^(QGResponeModel *responeModel) {
         if (responeModel.code == 0) {
             QGUserModel *model = [QGUserModel yy_modelWithJSON:responeModel.data];
             [QGUserManager shareMgr].userModel = model;
-            [QGUserManager shareMgr].token = responeModel.data[@"token"];
+            [[NSUserDefaults standardUserDefaults] setObject:responeModel.data[@"token"] forKey:kTokenSaveKey];
+            [[NSUserDefaults standardUserDefaults] synchronize];
             !self.loginComplete ? : self.loginComplete(model);
             [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         }else{

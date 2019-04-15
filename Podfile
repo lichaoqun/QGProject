@@ -13,4 +13,5 @@ target 'QGProject' do
     pod 'YYCategories'
     pod 'pop'
     pod 'TZImagePickerController'
+    pod 'MJRefresh'
 end

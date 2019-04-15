@@ -10,6 +10,13 @@
 
 @implementation QGNavigationController
 
++(void)initialize{
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    navigationBar.translucent = NO;
+    [navigationBar setShadowImage:[[UIImage imageNamed:@"nav_shadow"] resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile]];
+    [navigationBar setBackgroundImage:[UIImage imageWithColor:colorGrayFFFFFF() size:CGSizeMake(kScreenWidth, kNavigatonBarHei)] forBarMetrics:UIBarMetricsDefault];
+}
+
 // - MARK: <-- 跳转 -->
 /** present 跳转 */
 - (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{

@@ -17,4 +17,7 @@
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
+
+- (void)addRoundedCorners:(UIRectCorner)corners
+                withRadii:(CGSize)radii;
 @end

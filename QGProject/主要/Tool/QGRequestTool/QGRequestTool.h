@@ -14,10 +14,19 @@
 /** 首页数据 */
 +(NSURLSessionTask *)getHomeDataComplete:(QGResponeComplete)complete;
 
-/** 获取帖子的详细信息 */
-+(NSURLSession *)getTopicDetailWithTopicID:(NSString *)topicID complete:(QGResponeComplete)complete;
+/** 获取验证码 */
++(NSURLSessionTask *)sendVerificationNumWithPhone:(NSString *)phoneNum complete:(QGResponeComplete)complete;
 
 /** 登录 */
 +(NSURLSessionTask *)loginWithPhoneNum:(NSString *)phoneNum verificationCode:(NSString *)verificationCode complete:(QGResponeComplete)complete;
+
+/** 根据 token 获取用户信息 */
++(NSURLSessionTask *)judgeTokenComplete:(QGResponeComplete)complete;
+
+/** 获取帖子的详细信息 */
++(NSURLSession *)getTopicDetailWithTopicID:(NSString *)topicID complete:(QGResponeComplete)complete;
+
+/** 获取帖子的评论信息 */
++(NSURLSessionTask *)getCommentListWithTopicID:(NSString *)topicID page:(int)page complete:(QGResponeComplete)complete;
 
 @end

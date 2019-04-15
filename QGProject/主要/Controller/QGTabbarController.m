@@ -19,6 +19,16 @@
 
 @implementation QGTabbarController
 
++(void)initialize{
+    UITabBarItem * tabarItem = [UITabBarItem appearance];
+
+    NSDictionary * normalAttrs = @{NSForegroundColorAttributeName : colorGray000000(), NSFontAttributeName : fontBold14()};
+    NSDictionary * selectAttrs = @{NSForegroundColorAttributeName : colorRedCD3700(), NSFontAttributeName : fontBold14()};
+    
+    [tabarItem setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+    [tabarItem setTitleTextAttributes:selectAttrs forState:UIControlStateSelected];
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     
@@ -38,6 +48,8 @@
     [tabarItem setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
 
     QGTabbar *tabBar = [[QGTabbar alloc]init];
+    tabBar.shadowImage = [[UIImage imageNamed:@"tabbar_shadow"]  resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile];
+    [tabBar setBackgroundImage:[UIImage imageWithColor:colorGrayFFFFFF() size:CGSizeMake(kScreenWidth, kTabbarHei)]];
     [self setValue:tabBar forKey:@"tabBar"];
 }
 

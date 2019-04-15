@@ -14,7 +14,6 @@
 #import "QGHomeModel.h"
 #import "QGAllHomeModel.h"
 #import "QGPublishChooseCategoryVC.h"
-#import "QGUserInfoView.h"
 
 static NSString * const homeSliderCellID = @"homeSliderCellID";
 static NSString * const homeCategoryCellID = @"homeCategoryCellID";
@@ -35,14 +34,6 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupData];
-    QGUserInfoView *view = [[QGUserInfoView alloc]init];
-    view.userModel = nil;
-    [self.view addSubview:view];
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view).offset(kNavigatonBarHei);
-        make.height.mas_equalTo(70);
-    }];
 }
 
 // - MARK: <-- 网络请求 -->
@@ -184,9 +175,13 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    QGTopicDetailVC *detailVC = [[QGTopicDetailVC alloc]init];
-    [self.navigationController pushViewController:detailVC animated:YES];
+    QGHomeModel *model = self.modelsArray[indexPath.section];
+    if (model.dataType == QGHomeDataTypeTopic) {
+        QGHomeTopicModel *topicModel = (QGHomeTopicModel *)model.dataContent[indexPath.row];
+        QGTopicDetailVC *detailVC = [[QGTopicDetailVC alloc]init];
+        detailVC.topicModel = topicModel;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
 }
 
 /** 轮播图图片点击的回调 */

@@ -20,6 +20,9 @@
 /** 单例初始化 */
 +(instancetype)shareMgr;
 
+/** 更新用户信息 */
++(void)refreshUserInfo;
+
 /** 显示登录页面 */
 +(void)showLoginVCComplete:(void(^)(QGUserModel *userModel))complete;
 

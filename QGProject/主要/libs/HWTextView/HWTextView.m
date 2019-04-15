@@ -80,7 +80,7 @@
     // 文字属性
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = self.font;
-    attrs[NSForegroundColorAttributeName] = self.placeholderColor?self.placeholderColor:[UIColor grayColor];
+    attrs[NSForegroundColorAttributeName] = self.placeholderColor?self.placeholderColor:colorGray666666();
     // 画文字
 //    [self.placeholder drawAtPoint:CGPointMake(5, 8) withAttributes:attrs];
     CGFloat x = 5;

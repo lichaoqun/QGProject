@@ -9,6 +9,7 @@
 #import "QGAppDelegate.h"
 #import "QGTabbarController.h"
 #import "QGNavigationController.h"
+#import "QGAppDelegate+Extension.h"
 
 @interface QGAppDelegate ()
 
@@ -24,7 +25,10 @@
     QGNavigationController *nav = [[QGNavigationController alloc]initWithRootViewController:tab];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
-
+    
+    /** 配置一些数据 */
+    [self dy_application:application didFinishLaunchingWithOptions:launchOptions];
+    
     return YES;
 }
 
