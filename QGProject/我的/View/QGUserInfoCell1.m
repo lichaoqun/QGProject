@@ -22,7 +22,7 @@
 // - MARK: <-- 设置用户信息 -->
 -(void)setUserModel:(QGUserModel *)userModel{
     _userModel = userModel;
-    [self.userIconImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatar]];
+    [self.userIconImageView qg_setImageWithURLStr:userModel.avatar];
 }
 
 // - MARK: <-- 懒加载 -->

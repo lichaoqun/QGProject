@@ -44,7 +44,7 @@
 /** 赋值 model */
 -(void)setUserModel:(QGUserModel *)userModel{
     _userModel = userModel;
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatar]];
+    [self.avatarImageView qg_setImageWithURLStr:userModel.avatar];
     self.userNameLabel.text = userModel.nickName;
     self.userPhoneNumLabel.text = userModel.userName;
     [self callButton];

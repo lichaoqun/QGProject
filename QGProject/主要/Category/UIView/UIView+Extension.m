@@ -7,6 +7,8 @@
 //
 
 #import "UIView+Extension.h"
+#import <SDWebImage/UIButton+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation UIView (Extension)
 
@@ -114,5 +116,32 @@
     [shape setPath:rounded.CGPath];
     
     self.layer.mask = shape;
+}
+@end
+
+
+
+@implementation UIImageView (Extension)
+
+
+/** 根据URL设置图片 */
+- (void)qg_setImageWithURLStr:(nullable NSString *)urlStr{
+    if (![urlStr hasPrefix:@"http"]) {
+        urlStr = [requestBaseURL stringByAppendingString:urlStr];
+    }
+    [self sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+}
+@end
+
+@implementation UIButton (Extension)
+
+/** 根据URL设置图片 */
+- (void)qg_setImageWithURLStr:(nullable NSString *)urlStr
+                     forState:(UIControlState)state{
+    if (![urlStr hasPrefix:@"http"]) {
+        urlStr = [requestBaseURL stringByAppendingString:urlStr];
+    }
+    [self sd_setImageWithURL:[NSURL URLWithString:urlStr] forState:state];
+    
 }
 @end

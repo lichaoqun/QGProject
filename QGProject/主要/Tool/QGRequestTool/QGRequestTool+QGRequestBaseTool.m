@@ -10,9 +10,6 @@
 
 @implementation QGRequestTool (QGRequestBaseTool)
 
-/** ip 地址 */
-static NSString * const requestBaseURL = @"http://94.191.32.212:8081/";
-
 /** get 请求 */
 + (NSURLSessionTask *)GET:(NSString *)URL
                parameters:(id)parameters

@@ -11,8 +11,6 @@
 #import <Masonry.h>
 #import <PPNetworkHelper.h>
 #import <YYCategories/YYCategories.h>
-#import <SDWebImage/UIButton+WebCache.h>
-#import <SDWebImage/UIImageView+WebCache.h>
 #import <POP.h>
 #import <YJProgressHUD/YJProgressHUD.h>
 #import <YYModel/YYModel.h>

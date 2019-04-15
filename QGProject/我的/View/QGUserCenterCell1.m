@@ -35,7 +35,7 @@
 -(void)setUserModel:(QGUserModel *)userModel{
     _userModel = userModel;
     if ([QGUserManager shareMgr].token) {
-        [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatar]];
+        [self.headerImageView qg_setImageWithURLStr:userModel.avatar];
         self.nickNameLabel.text = userModel.nickName;
         self.userNameLabel.text = userModel.userName;
     }else{

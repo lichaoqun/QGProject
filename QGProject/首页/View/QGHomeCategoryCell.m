@@ -63,7 +63,7 @@ int const itemCountPerRow = 5;
 -(void)setCategoryModel:(QGHomeCategoryModel *)categoryModel{
     _categoryModel = categoryModel;
     self.categoryTitleLabel.text = categoryModel.cateName;
-    [self.categoryImageView sd_setImageWithURL:[NSURL URLWithString:categoryModel.cateIconUrl]];
+    [self.categoryImageView qg_setImageWithURLStr:categoryModel.cateIconUrl];
 }
 
 @end

@@ -90,7 +90,7 @@ static NSArray *modelsArray_;
         
         // 5. 设置按钮的内容
         btn.titleLabel.font = fontNormal14();
-        [btn sd_setImageWithURL:[NSURL URLWithString:obj.cateIconUrl] forState:UIControlStateNormal];
+        [btn qg_setImageWithURLStr:obj.cateIconUrl forState:UIControlStateNormal];
         [btn setTitle:obj.cateName forState:UIControlStateNormal];
         [btn setTitleColor:colorGray000000() forState:UIControlStateNormal];
         

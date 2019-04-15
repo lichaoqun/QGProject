@@ -60,7 +60,7 @@
         }];
     }else{
         CGFloat imgH = 70;
-        [self.topicDesImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.contentImgUrl]];
+        [self.topicDesImageView qg_setImageWithURLStr:topicModel.contentImgUrl];
         [self.topicDesImageView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(imgH, imgH));
             make.right.equalTo(self.contentView).offset(-10);
@@ -82,7 +82,7 @@
     self.publishTimeLabel.text = [NSString formatTimeWithInterval:topicModel.content.contentPublishTime];
     
     // - 发帖人信息
-    [self.author_iconImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.user.avatar]];
+    [self.author_iconImageView qg_setImageWithURLStr:topicModel.user.avatar];
     self.author_nameLabel.text = topicModel.user.nickName;
     self.categoryView.category = topicModel.content.cateName;
 }

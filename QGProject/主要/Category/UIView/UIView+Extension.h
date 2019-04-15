@@ -21,3 +21,17 @@
 - (void)addRoundedCorners:(UIRectCorner)corners
                 withRadii:(CGSize)radii;
 @end
+
+@interface UIImageView (Extension)
+
+/** 根据URL设置图片 */
+- (void)qg_setImageWithURLStr:(nullable NSString *)urlStr NS_REFINED_FOR_SWIFT;
+
+@end
+
+@interface UIButton (Extension)
+
+/** 根据URL设置图片 */
+- (void)qg_setImageWithURLStr:(nullable NSString *)urlStr
+                  forState:(UIControlState)state NS_REFINED_FOR_SWIFT;
+@end

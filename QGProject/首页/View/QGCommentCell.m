@@ -100,7 +100,7 @@
 - (void)setCommentModel:(QGTopicDetailCommentContentModel *)commentModel{
     _commentModel = commentModel;
     
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:commentModel.user.avatar]];
+    [self.avatarImageView qg_setImageWithURLStr:commentModel.user.avatar];
     self.nickNameLabel.text = commentModel.user.nickName;
     self.timeLabel.text = [NSString formatTimeWithInterval:commentModel.commentTime];
     self.commentLabel.text = commentModel.commentDetail;
