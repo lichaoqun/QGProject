@@ -91,12 +91,9 @@ static NSString * const homeTopicCellID = @"homeTopicCellID";
             make.left.right.top.equalTo(self.view);
             
             if (@available(iOS 11.0, *)) {
-                tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-                make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
-                
-            }else{
-                make.bottom.equalTo(self.view).offset(-49);
+                tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;                
             }
+            make.bottom.equalTo(self.view).offset(kTabbarHei);
         }];
     }
     return _tableView;

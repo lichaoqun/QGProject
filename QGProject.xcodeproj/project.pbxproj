@@ -43,6 +43,7 @@
 		D0101FEF225BA17A00A348EF /* QGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FEE225BA17A00A348EF /* QGCommentCell.m */; };
 		D0101FF3225BA6D900A348EF /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0101FF2225BA6D900A348EF /* NSString+Extension.m */; };
 		D02160F3225CEC860050647D /* QGUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02160F2225CEC860050647D /* QGUserInfoView.m */; };
+		D02FB367226764F90059760B /* QGTopicListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FB366226764F90059760B /* QGTopicListVC.m */; };
 		D042711122526FE300FB1A26 /* QGHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D080EFC622526A42002ACDFB /* QGHomeModel.m */; };
 		D062BAA8225739F20004833A /* QGPublishTopicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D062BAA7225739F20004833A /* QGPublishTopicVC.m */; };
 		D06585D122574327009BCECA /* QGControllerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D06585D022574327009BCECA /* QGControllerTool.m */; };
@@ -147,6 +148,8 @@
 		D02160F2225CEC860050647D /* QGUserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGUserInfoView.m; sourceTree = "<group>"; };
 		D02160F4225CFA380050647D /* QGColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGColors.h; sourceTree = "<group>"; };
 		D02160F5225CFE5A0050647D /* QGFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGFont.h; sourceTree = "<group>"; };
+		D02FB365226764F90059760B /* QGTopicListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTopicListVC.h; sourceTree = "<group>"; };
+		D02FB366226764F90059760B /* QGTopicListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTopicListVC.m; sourceTree = "<group>"; };
 		D062BAA6225739F20004833A /* QGPublishTopicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGPublishTopicVC.h; sourceTree = "<group>"; };
 		D062BAA7225739F20004833A /* QGPublishTopicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGPublishTopicVC.m; sourceTree = "<group>"; };
 		D06585CF22574327009BCECA /* QGControllerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGControllerTool.h; sourceTree = "<group>"; };
@@ -441,6 +444,8 @@
 				D080EF3A22508DA8002ACDFB /* QGHomeVC.m */,
 				D0101FD5225B915900A348EF /* QGTopicDetailVC.h */,
 				D0101FD6225B915900A348EF /* QGTopicDetailVC.m */,
+				D02FB365226764F90059760B /* QGTopicListVC.h */,
+				D02FB366226764F90059760B /* QGTopicListVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -766,6 +771,7 @@
 				D062BAA8225739F20004833A /* QGPublishTopicVC.m in Sources */,
 				D0101FBC22585E4400A348EF /* QGUserInfoCell2.m in Sources */,
 				3422D5CE2262ED800087C5E1 /* DYNewsCommentInputView.m in Sources */,
+				D02FB367226764F90059760B /* QGTopicListVC.m in Sources */,
 				D0101FF3225BA6D900A348EF /* NSString+Extension.m in Sources */,
 				D080EFB022524B75002ACDFB /* QGModel.m in Sources */,
 				3422D5CF2262ED800087C5E1 /* DYNewsCommentBottomView.m in Sources */,

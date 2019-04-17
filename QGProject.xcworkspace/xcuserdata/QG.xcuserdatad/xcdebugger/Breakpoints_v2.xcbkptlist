@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QGProject/&#x9996;&#x9875;/Controller/QGHomeVC.m"
-            timestampString = "576518566.052614"
+            timestampString = "577203257.13578"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "-viewDidLoad"
+            landmarkName = "-setupData"
             landmarkType = "7">
             <Locations>
                <Location
